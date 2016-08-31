@@ -1,0 +1,98 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>scrum.20160822</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <p class="messages"><span class="username">calmazini</span><span class="time"> 12:11</span> >> <span class="cite">@augusto_magalhaes</span>: já trabalhei de maneiras diferentes: já dei “not done” na _user story_ toda, sem contar ponto nenhum para o sprint finalizado e a descartei, criando uma nova para continuar o trabalho com uma nova estimativa do time. Já movi a _us_ toda para o sprint seguinte, mantendo a pontuação previamente dada pelo time e o mesmo conteúdo, sem contar pontos para o sprint terminado e valendo os pontos para o sprint em que ela acabou sendo entregue. Já quebrei a _us_ e reestimei as partes, usando a review e o planning para isso (às vezes dava mais do que duas _us_) e cada sprint ficava com uma parte da _us_, com as novas estimativas. Já replanejei e quebrei a _us_ durante o sprint, junto com o time, logo que percebemos que ela era maior do que estimamos inicialmente e repactuamos as entregas, mesmo antes de acabar o sprint. A melhor experiência que achei, foi de quebrar a _us_ logo que percebemos que precisávamos e repontuar todas as partes, junto com o time. Foi bom para o time que estava com o problema fresco na cabeça, bom para mim que tive a ajuda deles onde precisava e bom para o meu product backlog, porque ainda tinha o tempo que faltava do sprint, para correr atrás do que faltasse de negócio na _us_, envolver os demais interessados e repriorizar o que fosse necessário, para no próximo sprint não termos tanto problema e dessa maneira acabava sendo mais tranquilo manter as expectativas alinhadas entre time, eu e interessados.</p>
+<p class="messages"><span class="username">augusto_magalhaes</span><span class="time"> 12:22</span> >> <span class="cite">@calmazini</span> Curti tua sugestão de como evitar o problema, e vou sugerir ao time. Mas e quando ainda com tudo isso, o time atrasa a entrega ? Qual a melhor forma que você encontrou pra lidar com  a "reestimativa" ? 
+
+E quando a quebra das us não é possível ? Pois temos situações em que não temos nada a entregar de valor quebrando uma us.</p>
+<p class="messages"><span class="username">calmazini</span><span class="time"> 02:38</span> >> <span class="cite">@augusto_magalhaes</span>: depois que encontrei essa maneira de lidar com a reestimativa e, contudo, os times continuavam a dar _“sprint not done”_,  considerei que esse era um remédio que "atacava as consequências, mas não resolvia o problema” e me preocupei em investigar a causa base. Fazendo isso, identifiquei que não era uma coisa só e mapeei os cenários. Para cada caso pensei numa saída diferente e fui testar. No caso das _us "not done"_, porque o trabalho envolvia áreas que não dava para ter muita interação (o motivo vai desfocar a resposta, mas podemos falar depois se quiser) e comprometia a criação das _us_ assim como o seu desenvolvimento, resolvi aceitar que a indefinição era mesmo bem maior do que eu gostaria e estimulava os times a estimarem um esforço maior – fazia isso sendo P.O mesmo, porque era importante para mim diminuir o esforço de gestão com as reestimativas. Com o tempo, aprendemos a lidar com as áreas, encontramos meios de nos comunicar melhor e a pontuação para essas _us_ foram baixando. No caso das _us “not done”_, porque o trabalho surpreendia os times no meio do sprint, comecei a exercitar _spike_ e _poc_ com eles e tanto os times quanto eu, conseguimos ter mais condições de definir e executar as _us_. No começo foi complicado (definir o que é um e o que é outro, quanto “custa”, o que a gente entrega em cada caso e coisas assim), mas fomos aprendendo a usar e a identificar quando algum assunto precisava desse tipo de recurso ou dava para encarar direto num sprint. Com o tempo começamos a não arrastar mais _us_ para os próximos sprints por causa disso. Nos produtos mais complexos, era mais comum as _us_ ficarem muito grandes, para resultarem numa de entrega de valor. Quando isso acontecia, tentava repensar a _us_, encarando que essa era o que eu dizia ser a “percepção ideal de valor” (nem sei se esse nome faz sentido, mas a ideia era me convencer de que poderia ter sim valor numa parte menor daquela _us_) e continuava quebrando a cabeça, para fatiar a _us_ verticalmente no máximo de partes possível, mesmo que a entrega parecesse ser bem tosca, até insuficiente ou metade do que precisava ser, mas já aparecendo alguma coisa para o usuário final (humano ou não) consumir. Um recurso que, nesse casos, eu tomava muito cuidado para não me apoiar, era quando tinha parte do trabalho que realmente precisava ser quebrado em entregas “não funcionais”. Mesmo assim, procurava fazer com que esse trabalho estivesse diretamente ligado à um grupo de _us_ que resultaria numa feature que o usuário final (humano ou não) consumiria. Algumas dessas situações começaram a ser melhor evitadas, quando comecei a fazer gestão dos backlogs em paralelo ao andamento dos sprints. Procurava fazer reuniões de refinamento dos backlogs (e até o grooming do portfólio todo) junto com o time e outras partes interessadas periodicamente, independente de sprint planning e release planning, no caso do Scrum.</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 11:14</span> >> +1 para `reuniões de refinamento dos backlogs periodicamente`</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 11:23</span> >> <span class="cite">@augusto_magalhaes</span>: pq vc está estimando? Vc não consegue quebrar a estória do ponto de vista de business ou técnico?</p>
+<p class="messages"><span class="username">ruckert</span><span class="time"> 11:44</span> >> Galera que usa pontos para estimar as histórias. Gostaria de saber se vocês estão dando pontos para outros tipo de entregas (bugs, tarefas de integração, etc)?</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 11:54</span> >> Já trabalhei em times que estimavam tudo em ponto, mas não comparavamos pontos de bugs com pontos de estórias.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 11:55</span> >> Usar a mesma metrica para os dois é igual comparar alhos com bugalhos ;)</p>
+<p class="messages"><span class="username">lfabris</span><span class="time"> 12:31</span> >> Galera parei de trabalhar com pontos e entregas...Aqui isso faz sentido porque nosso contrato é baseado em horas, ou seja no final eu lanço horas na conta do cliente onde existem dois tipos de horas, horas free de correções de entregas anteriores e horas cobradas relativas a novos desenvolvimentos. O que estamos fazendo é estimar o começo do Sprint um conjunto de entregas, ai logo após esta reunião crio uma apresentação ppt de prestação de contas e escrevo lá todas as entregas combinadas. Conforme os imprevistos acontecem eles entram em um slide de não planejados, e vão sendo trocados por coisas de tamanho semelhante ao planejado. No final do mês exibimos ao cliente o resultado do trabalho, mostramos onde queríamos chegar, as vezes não chegamos porque mudamos de caminho no meio do mês e refazemos o mesmo ciclo novamente para o próximo mês. 
+Isso me atende plenamente porque deixa transparente a aprovação dos lançamentos de horas da equipe para o meu cliente.</p>
+<p class="messages"><span class="username">vladsonfreire</span><span class="time"> 12:52</span> >> <span class="cite">@lfabris</span> eu já trabalhei em um cenário semelhante. No meu caso, o time escolheu trabalhar com pontos por achar importante ao poder controlar a evolução da velocidade. Para o cliente o que importava eram as horas, pois ele me pagava em horas. Com essa visão, pegávamos atividades até preencher a capacidade do time em pontos e a cada entrega, preenchíamos o relatório de horas dele contemplando os dias úteis do Sprint.</p>
+<p class="messages"><span class="username">lfabris</span><span class="time"> 01:01</span> >> <span class="cite">@vladsonfreire</span> Entendi, existe um problema clássico com os pontos, pelo tempo gasto para estimar X precisão... no caso vou compartilhar outra decisão do time, que eu acho muito legal, estamos medindo tempo de resposta, estamos estimando quando cada solicitação entra em produção, o fechamento do mês é no final do Sprint mas as entregas em produção vão acontecendo conforme o Done, Sem planning pocker com um consenso (é fácil pq a équipe é bem reduzida, 3 comigo) imaginamos se é algo pequeno médio ou grande e tentamos bater nosso tempo de resposta as coisas
+Mas perceba que de certa forma a valoração das coisas ainda acontecem, precisamos poder comparar itens para entender este é mais complexo que aquele?</p>
+<p class="messages"><span class="username">vladsonfreire</span><span class="time"> 01:05</span> >> <span class="cite">@lfabris</span> Não tem forma certa ou errada. Tem que experimentar e ver o que se adequa melhor ao seu contexto. O que eu acha importante é separar as necessidades de controle do cliente das necessidades do time.</p>
+<p class="messages"><span class="username">calmazini</span><span class="time"> 01:45</span> >> <span class="cite">@andersonhummel</span>: fiquei com uma dúvida sobre seu comentário... Se o bug será atacado pelo mesmo time, no produto que eles já conhecem e alguns bugs, só de ver o erro, eles já sabem até onde o bicho está escondido, por que não usar a mesma métrica das histórias, para estimar os bugs se o esforço deles também é passível de comparação? Não seria mais interessante usar a mesma régua, já que vai consumir espaço de um sprint como qualquer outro?</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 01:48</span> >> Pq a técnica de "user story point" tem como base a comparação entre elementos.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 01:48</span> >> A partir do momento que você começa a comparar elementos com diferentes características deixa de fazer sentido fazer a comparação...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 01:49</span> >> Imagina comparar a estimativa de "pontos" entre escrever textos em diferentes idiomas...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 01:50</span> >> No fim tudo é escrever porem por se tratar de diferentes idiomas, diferentes vocabularios, e diferentes estruturas linguisticas e gramaticais</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 01:50</span> >> deixa de fazer sentido a comparação entre escrever o texto</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 01:50</span> >> Vai ser completamente diferente escrever Anatomia de um grande Scrum Master em portugues, ingles, russo, espanhol e japones</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 01:52</span> >> Não sei se o exemplo foi bom.....</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 01:52</span> >> Mas a natureza dos trabalhos é diferente e essa é a grande questão</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 01:59</span> >> faz sentido?</p>
+<p class="messages"><span class="username">robson.inacio</span><span class="time"> 03:01</span> >> Faz sentido pra mim <span class="cite">@andersonhummel</span>... Lendo esta discussão aqui, é como um filme passando na minha cabeça :slightly_smiling_face:. Me questionei bastante sobre tudo isso aqui quanto usávamos scrum. No meu caso, trabalhamos com projetos por bastante tempo, contratos longos (4 anos), inclusive com o software em operação. No geral temos novos projetos, projetos em operação, bugs etc... tudo junto, misturado e concorrendo recursos. No contexto aqui, o scrum não se mostrou uma boa escolha, por não lidar tão bem com isso tudo. Chegou um ponto que não fazia sentido ter meta de sprint por exemplo, o que estavamos usando aqui não era mais scrum. Quando leio o descrito pelo <span class="cite">@lfabris</span> vejo uma aplicação de kanban mais coerente. Quanto a estimativas(que não fazemos), usamos para previsibilidade, planejamento e alguns orçamentos. Para isso usamos leadtime médio. Qualquer coisa estou ai :wink:</p>
+<p class="messages"><span class="username">ariamaral</span><span class="time"> 04:11</span> >> Prefiro nao tratar Bugs com estimativas de pontos. Ou estima em horas ou mede o lead time médio dos bugs.  Mas depende da empresa, na maioria dos casos eu uso Kanban para bugs.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 04:47</span> >> <span class="cite">@robson.inacio</span> só vou te dar uma ideia... se vocês começarem a sentir falta de proposito de entrega. Reflita novamente pelo Scrum...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 04:48</span> >> As escolhas do método de trabalho deve ser casual e temporal</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 04:49</span> >> Tem alguns problemas que aparecem na tentativa de adoção ou execução de longo prazo do Scrum que podem ser tratados com Kanban.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 04:49</span> >> Tem alguns problemas que aparecem na tentativa de adoção ou execução de longo prazo do Kanban que podem ser tratados com Scrum.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 04:50</span> >> Faz sentido?</p>
+<p class="messages"><span class="username">robson.inacio</span><span class="time"> 06:12</span> >> Perfeito <span class="cite">@andersonhummel</span>! mas a questão não esta relacionada com falta de propósito e sim com o tamanho dos entregavéis, nos ultimos sprints que fizemos, tinhamos sprints de 1 semana com 2, as vezes 3 itens de trabalho entregues, e itens não relacionados. No nosso contexto fez mais sentido usar kanban. Quanto a escolha de A ou B, Scrum ou kanban, nem escolho mais :smile:. Vejo como o cinto de utilidades do batman :stuck_out_tongue:. Usamos Scrum puro ( ou puramente manipulado) por um tempo aqui e até hoje algumas coisas ainda fazem sentido, como POs, release planning, release burnup. Quanto aos problemas de adoção de longo prazo, seja com kanban, scrum ou qualquer outro, sempre existirão problemas ou pontos de melhoria, acho que é o tal contexto :stuck_out_tongue:. Apesar de não saber que problemas especificamente vc está falando. Ainda sobre os bugs, usando leadtime médio temos até uma espécie de SLA, hoje em 7hs, o que passa confiança para nossos clientes.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 06:15</span> >> <span class="cite">@robson.inacio</span> o problema em especifico é exatamente o de falta de noção de proposito e foco em somente entregar a demanda que é exatamente o motivo de ter a Sprint Goal.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 06:15</span> >> Num passado que o historico do slack não permite ver, algumas pessoas levantaram exatamente esse ponto.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 06:16</span> >> Só por você estar usando Sprint de uma semana já começa a reflexão de usar Kanban.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 06:17</span> >> Se o time não for grade o suficiente para isolar os bugs do Scrum Team já começa a reflexão tbm</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 06:19</span> >> SLA lindo de 7 hrs (eu quero S2).
+É contratual de 7 hrs ou é tempo médio pra corrigir os bugs?</p>
+<p class="messages"><span class="username">robson.inacio</span><span class="time"> 07:51</span> >> Verdade <span class="cite">@andersonhummel</span>! Foco no propósito ou foco na demanda (lembrei daquelas metáforas sobre tomadores de pedido) ... isso me lembra eficácia vs eficiência :stuck_out_tongue:. Aqui temos times de 4 a 5 pessoas, não mais que isso, os itens de trabalho são focados no problema de negócio que estamos resolvendo. Ja trabalhei com times onde e algum tempo tínhamos tipo uma escala para fazer os bugs (tipo um comite), em outros tempos um time específico para os bugs. Hoje tratamos os projetos e produtos mais como áreas de conhecimento mesmo. Onde quem(time) deixou o bug, o corrige, aqui tudo é feedback, principalmente defeitos. As 7hs é leadtime médio. As SLAs em contrato são de 12, 24 e 36hs.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 07:54</span> >> Agora faz sentido a distinção do SLA e do Lead Time. 
+Um SLA de 7 hrs é pesado... já ia te perguntar como? 
+Mesmo assim, parabens pelo lead time médio de 7hrs! É um numero otimo</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 07:54</span> >> Vc chego a dar uma olhada no canal #fluxo_unificado ?</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 07:55</span> >> Eles vão te dar uns insights top pro seu contexto :wink:</p>
+    </body>
+    </html>

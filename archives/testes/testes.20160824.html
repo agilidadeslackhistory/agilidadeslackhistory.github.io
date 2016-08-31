@@ -1,0 +1,90 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>testes.20160824</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <p class="messages"><span class="username">matheus.rodrigues</span><span class="time"> 05:59</span> >> Pensando em automação de testes de APP IOS/Android o que o pessoal aqui presente tem utilizado ?? Estamos com dúvidas quanto a real efetividade no uso de testcloud vs real device e seus custos... Pensando na parte script utilizei ferramentas nativas para os dois SO's o problema é apenas quanto ao custo em adquirir uma quantidade grande de aparelhos para os testes.</p>
+<p class="messages"><span class="username">matheus.rodrigues</span><span class="time"> 05:59</span> >> Agradeço se algumas dicas aparecerem :+1:</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:03</span> >> Olá. Eu , por algum tempo, utilizei muito Appium para gerar testes E2E para iOS e android.</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:03</span> >> A questão sobre usar cloud, o grande problema é para o lado de android.</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 06:03</span> >> <span class="cite">@matheus.rodrigues</span>  o pessoal de cada plataforma vai fazer independente ou serão testadores que escreverão os scripts?</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:03</span> >> que o nincho é bemmmm maior..</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:04</span> >> O que já fiz em 4 projetos foi fazer um custo baseado em low-end, med-end e high-end para android, vendo as specs e seus preços. Am todos os projetos , adquirir os devices ia sair mais barato.</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:05</span> >> Pois a compra foi deslocado orçamento da empresa para cobrir, pois seria um reaproveitamento.</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:06</span> >> Foi montado rack, power supplie, toda a estrutura e essa estrutura pode ser usada por qualquer filial nossa , via LDAP..</p>
+<p class="messages"><span class="username">matheus.rodrigues</span><span class="time"> 06:06</span> >> <span class="cite">@elias.nogueira</span>  testers que irão desenvolver os scripts</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 06:07</span> >> O ideal é escolher um framework não nativo, como o <span class="cite">@rsaccoll</span> falou: Appium</p>
+<p class="messages"><span class="username">matheus.rodrigues</span><span class="time"> 06:07</span> >> Legal a informação passada <span class="cite">@rsaccoll</span></p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:08</span> >> Depende <span class="cite">@elias.nogueira</span> , qual o nível de conhecimento dos testers e a “proximidade” do código deles <span class="cite">@matheus.rodrigues</span> ?</p>
+<p class="messages"><span class="username">matheus.rodrigues</span><span class="time"> 06:08</span> >> <span class="cite">@nunesrodrigo</span> <span class="cite">@akirasugiura</span> <span class="cite">@elluy</span></p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 06:08</span> >> Quando aos dispositivos é mais facil do que sempre parece. Minha recomendação é primeiro tu analisar os logs de acessos para ver quais dispositivos são os mais utilizados</p>
+<p class="messages"><span class="username">matheus.rodrigues</span><span class="time"> 06:09</span> >> <span class="cite">@rsaccoll</span> Alguns até fazem alterações nos app's o conhecimento é considerável</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 06:09</span> >> Olha <span class="cite">@rsaccoll</span>  é extremamente difícil tu ter testers que conheçam os frameworks nativos… quase impossível</p>
+<p class="messages"><span class="username">matheus.rodrigues</span><span class="time"> 06:09</span> >> Sim <span class="cite">@elias.nogueira</span>  por isso a dúvida o investimento seria um pouco alto pela quantidade de devices utilizados</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:09</span> >> Difícil mas nunca impossível <span class="cite">@elias.nogueira</span> …Tem que botar um pouco de fé neles.. :stuck_out_tongue_winking_eye:</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 06:10</span> >> Dá pra fazer um mix de devices reais + simulados…  e usar a nuvem apenas para correção de bugs em dispositivos que tu não tenha</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 06:10</span> >> “quase impossivel” <span class="cite">@rsaccoll</span></p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:10</span> >> <span class="cite">@matheus.rodrigues</span> , sobre a aquisição de devices, tenta ver se isso vai ser uma aquisição por projeto ou pela empresa.</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:10</span> >> Isso ajuda muito na hora de ver orçamento.</p>
+<p class="messages"><span class="username">matheus.rodrigues</span><span class="time"> 06:11</span> >> agradeço muito pela experiência trocada por vocês aqui</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:11</span> >> Ex: Um projeto curto de 3 meses com 7 iOS e uns 36 devices androids, o custo em cloud vai ser bemmm menor..</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:11</span> >> Agora se desse projeto, tu vai poder utilizar para outros, é uma coisa a ser vista como investimento da empresa..(como falei, assumir parte)</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:12</span> >> E para iOS,  “projeto tiro-curto”, os emuladores são bons…Android também (tanto emuladores nativos como o genymotion..)</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:12</span> >> Sobre os frameworks nativos, se a galera é motivada, dá uma coisa que chamo de “sprint P&amp;D”..</p>
+<p class="messages"><span class="username">matheus.rodrigues</span><span class="time"> 06:12</span> >> eu pensei dessa forma e dei uma pesquisada mas como o projeto é contínuo a nuvem ficaria um pouco salgado</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:13</span> >> Sim, projetos de longo prazo a dor no bolso é a longo prazo também..hehehe</p>
+<p class="messages"><span class="username">matheus.rodrigues</span><span class="time"> 06:13</span> >> Agradeço mesmo as repostas e a prontidão de vocês</p>
+<p class="messages"><span class="username">matheus.rodrigues</span><span class="time"> 06:13</span> >> :slightly_smiling_face:</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:13</span> >> Sobre o Sprint P&amp;D, deixa eles pegarem as soluções nativas, não nativas de automação, e decidir o que encaixa melhor com as skills deles..</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:14</span> >> O que ficar bom, faz aquela coisa maldita de “bate o martelo” e segue o baile..</p>
+<p class="messages"><span class="username">matheus.rodrigues</span><span class="time"> 06:14</span> >> uaheuauehaue boa</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:14</span> >> Esse tipo de coisa ajuda muito também no desenvolvimento deles..(Caso tenham interesse)</p>
+<p class="messages"><span class="username">matheus.rodrigues</span><span class="time"> 06:14</span> >> exatamente</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 06:14</span> >> E dependendo da equipe pode motivar muito…gerar confiança..</p>
+    </body>
+    </html>

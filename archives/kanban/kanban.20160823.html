@@ -1,0 +1,124 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>kanban.20160823</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <p class="messages"><span class="username">ewertonsantos-ton</span><span class="time"> 01:52</span> >> Passa o macete depois rs !</p>
+<p class="messages"><span class="username">ewertonsantos-ton</span><span class="time"> 01:54</span> >> Ja fritei o miolo aqui … tentando entender rs #99%humanas  kkk</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 02:06</span> >> Prometo compartilhar aqui :smile: </p>
+<p class="messages"><span class="username">alan.borba</span><span class="time"> 04:21</span> >> Pessoal,
+
+a fim de ajudar o entendimento das fórmulas e das equações segue um resumo:
+
+Toda distribuição é dada por uma equação que é a função densidade de probabilidade (fdp) , ela basicamente descreve a probabilidade da váriavel que você ta obsarvando de acontecer. No caso de weibull é dado por aquela equação grande que depende de 3 parâmetros f(x,a,b) , a (lambda) o que é chamado de scale e b ( k ) que é chamado de shape. 
+
+Além da fdp tem a funçao distribuição acumulada (fda) que nada mais é do que a soma das probabilidades até o ponto x. No caso de weibull ela é dada por 
+
+f(x,b,a) = 1 - e^(-x/a)^b.
+
+Dado que a gente tem um amostra de dados ,no nosso caso lead times, a gente consegue estimar por regressão linear os parâmetros a e b dessa equação, isso é possivel pq a gente consegue linearizar a fda.
+
+Bom, temos os lead times que é o valor de x ( a váriavel que estamos observando) , precisamos dos valores de f(x,b,a). Pegamos o  intervalo [0,1] (de 0% a 100%) e dividimos em intervalos iguais aos dados que temos. Então conseguimos ver até quanto, por exemplo, o lead time = 3 vale.
+
+Por exemplo,
+
+[1,1,3,5] nossos lead times , dividindo eles teriamos  (x,f(x,b,a)) =  (1, 0.12),(1,0.37),(3,0.62),(5,0.87)
+
+Então basicamente isso me diz q até 0.37 o valor 1 é assumido pela fda, até 3 o valor assumido é 0.62 e assim por diante.
+
+Legal entedemos como funciona, mas como calcular a e b??
+
+Primeiro precisamos linear a nossa fda, mas como faremos isso?
+
+Para simplificar vou chamar f(x,b,a) = y 
+
+Portanto temos a seguinte equação fda:
+
+y = 1 - e^(-(x/a)^b). Temos e^(alguma coisa) portanto podemos aplicar logártimo neperiano para "descer" o expoente ( e^a --&gt; ln(e^a) = a)
+
+Então:
+
+1-y = e^(-(x/a)^b) --&gt;  ln(1-y) = -(x/a)^b  --&gt; ln(-ln(1-y)) = b*ln(x/a) --&gt;  ln(-ln(1-y)) = b*ln(x) - b*ln(a);
+
+Chegamos a nossa equação da reta ln(-ln(1-y)) = b*ln(x) - b*ln(a);
+
+A reta genérica é dada por y = m*x + c, onde m é o nosso parâmetro que define a inclinação da reta e c é o ponto de intersecção da reta com o eixo x.
+
+Temos nosso conjunto de dados, porém eles não estão de acordo com a nossa reta. 
+
+Precisamos então aplicar
+
+f(x,b,a) --&gt; ln(-ln(1-y))
+
+e 
+
+x --&gt; ln(x)
+
+No nosso novo conjunto de dados podemos aplicar regressão linear e descobrir então os parametrôs m e c da nossa reta. Não vou entrar aqui no mérito da equação que resolve m e c pela regressão, afinal o Excel já faz isso para gente.
+
+No excel temos:
+
+-A formula INTECEPT(...) que devolve a intersecção da reta , ou seja, nosso c
+-A formula SLOPE(....) que devolve a inclinação da reta, ou seja, nosso m
+
+Temos:
+
+ln(-ln(1-y)) = b*ln(x) - b*ln(a);
+ y = m*x + c
+
+ Então:
+
+ m = b
+ e
+ c = -b*ln(a) --&gt;  a = e^(-c/b)
+
+ Portanto encontramos nossos parâmetros para equação de weibull.
+
+Espero que de uma ajudada :slightly_smiling_face:</p>
+    </body>
+    </html>
