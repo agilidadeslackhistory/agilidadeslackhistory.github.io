@@ -18,6 +18,7 @@ namespace SlackHistory
     	
         static Dictionary<string, string> channels = new Dictionary<string, string>();
         static Dictionary<string, Member> users = new Dictionary<string, Member>();
+        static string token = "xoxp-123456";
         static string htmlTemplate =
     @"
     <!DOCTYPE html>
@@ -80,14 +81,18 @@ namespace SlackHistory
             getUsers();
             getChannels();
             //get only yesterday posts
-            getPosts(1);
+            for (int i = 2; i < 14; i++)
+            {
+                getPosts(i);    
+            }
+            
         }
 
         static void getUsers()
         {
             using (WebClient client = new WebClient())
             {
-                string response = client.DownloadString("https://slack.com/api/users.list?token=xoxp-123456");
+                string response = client.DownloadString("https://slack.com/api/users.list?token=" + token);
                 UserWrapper wrapper = new JavaScriptSerializer().Deserialize<UserWrapper>(response);
                 foreach (var member in wrapper.members)
                 {
@@ -100,7 +105,7 @@ namespace SlackHistory
         {
             using (WebClient client = new WebClient())
             {
-                string response = client.DownloadString("https://slack.com/api/channels.list?token=xoxp-123456");
+                string response = client.DownloadString("https://slack.com/api/channels.list?token=" + token);
                 ChannelWrapper wrapper = new JavaScriptSerializer().Deserialize<ChannelWrapper>(response);
 
                 foreach (var channel in wrapper.channels)
@@ -112,7 +117,7 @@ namespace SlackHistory
 
         static void getPosts(int i)
         {
-            var baseUrl = "https://slack.com/api/channels.history?token=xoxp-123456&channel={0}&count=1000&inclusive=1&oldest={1}&latest={2}";
+            var baseUrl = "https://slack.com/api/channels.history?token=" + token + "&channel={0}&count=1000&inclusive=1&oldest={1}&latest={2}";
             DateTime baseDate = DateTime.Now.AddDays(-1 * i).ToUniversalTime();
             DateTime oldest = new DateTime(baseDate.Year, baseDate.Month, baseDate.Day, 0, 0, 0, DateTimeKind.Utc);
             DateTime latest = new DateTime(baseDate.Year, baseDate.Month, baseDate.Day, 23, 59, 59, DateTimeKind.Utc);
@@ -123,7 +128,7 @@ namespace SlackHistory
                     string response = client.DownloadString(string.Format(baseUrl, channel.Key, oldest.ToUnixTime(), latest.ToUnixTime()));
                     MessageWrapper wrapper = new JavaScriptSerializer().Deserialize<MessageWrapper>(response);
                     var title = channel.Value + "." + DateTime.Now.AddDays(-1 * i).ToString("yyyyMMdd");
-                    var messages = handleMessages(wrapper, title);
+                    var messages = handleMessages(wrapper, title, channel.Value);
                     saveFile(messages, channel.Value, title);
                 }
             }
@@ -139,7 +144,7 @@ namespace SlackHistory
             File.AppendAllText(fileName, contents);
         }
 
-        static string handleMessages(MessageWrapper wrapper, string title)
+        static string handleMessages(MessageWrapper wrapper, string title, string channel)
         {
             var messagesHandled = new List<string>();
             DateTime dt = DateTime.Now;
@@ -157,6 +162,9 @@ namespace SlackHistory
 
                 try
                 {
+                    messageWithReplacements = Regex.Replace(messageWithReplacements, "<(http[s]?://.*?)\\|(.*?)>", m => "<a href=\"" + m.Groups[1].Value + "\">" + m.Groups[2].Value + "</a>");
+                    messageWithReplacements = Regex.Replace(messageWithReplacements, "<(http[s]?://.*?)>", m => "<a href=\"" + m.Groups[1].Value + "\">" + m.Groups[1].Value + "</a>");
+                    
                     messageWithReplacements = Regex.Replace(messageWithReplacements, "<@(.*?)\\|(.*?)>", m => "@" + m.Groups[2].Value);
                     messageWithReplacements = Regex.Replace(messageWithReplacements, "<@(.*?)>", m => "<span class=\"cite\">@" + users[m.Groups[1].Value].name + "</span>");
                     messageWithReplacements = Regex.Replace(messageWithReplacements, "<#C(.*?)\\|(.*?)>", m => "#" + m.Groups[2].Value);
@@ -171,15 +179,15 @@ namespace SlackHistory
                         "<p class=\"messages\"><span class=\"username\">" + 
                         (message.user!=null?users[message.user].name:"??") + 
                         "</span><span class=\"time\"> " + 
-                        dt.ToString("hh:mm") + 
+                        dt.ToString("HH:mm") + 
                         "</span> >> " + 
                         messageWithReplacements + 
                         "</p>");
             }
             if (messagesHandled.Count == 0)
-                return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", "NO MESSAGES :(").Replace("PARAM2", dt.ToString("dd/MM/yyyy"));   
+                return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", "NO MESSAGES :(").Replace("PARAM2", channel + " .:. " + dt.ToString("dd/MM/yyyy"));   
             else
-                return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", string.Join(Environment.NewLine, messagesHandled)).Replace("PARAM2", dt.ToString("dd/MM/yyyy"));   
+                return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", string.Join(Environment.NewLine, messagesHandled)).Replace("PARAM2", channel + " .:. " + dt.ToString("dd/MM/yyyy"));   
         }
     }
 
@@ -302,7 +310,9 @@ namespace SlackHistory
         public static DateTime FromUnixTime(this long unixTime)
         {
             var epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-            return epoch.AddSeconds(unixTime);
+            var utcTime = epoch.AddSeconds(unixTime);
+            TimeZoneInfo cstZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
+            return TimeZoneInfo.ConvertTimeFromUtc(utcTime, cstZone);
         }
 
         public static long ToUnixTime(this DateTime date)
