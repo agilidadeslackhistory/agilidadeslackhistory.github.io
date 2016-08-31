@@ -81,11 +81,8 @@ namespace SlackHistory
             getUsers();
             getChannels();
             //get only yesterday posts
-            for (int i = 2; i < 14; i++)
-            {
-                getPosts(i);    
-            }
-            
+            getPosts(1);    
+
         }
 
         static void getUsers()
