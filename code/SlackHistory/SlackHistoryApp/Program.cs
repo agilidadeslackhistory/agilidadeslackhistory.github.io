@@ -76,12 +76,8 @@ namespace SlackHistory
         {
             getUsers();
             getChannels();
-            for (int i = 11; i > 0; i--)
-            {
-                Console.WriteLine("doing " + DateTime.Now.AddDays(-1 * i).ToString("yyyyMMdd"));
-                getPosts(i);
-            }
-            //getPosts(1);
+            //get only yesterday posts
+            getPosts(1);
         }
 
         static void getUsers()
