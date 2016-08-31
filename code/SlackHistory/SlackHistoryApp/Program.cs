@@ -13,7 +13,7 @@ namespace SlackHistory
 {
     class Program
     {
-    	//replace token xoxp-26200241765-57896078608-64729098982-940f37bca0 by your own
+    	//replace token xoxp-123456 by your own
     	//look at saveFile to adjust the path
     	
         static Dictionary<string, string> channels = new Dictionary<string, string>();
@@ -69,6 +69,7 @@ namespace SlackHistory
         </style>
     </head>
     <body>
+        <h1>PARAM2</h1>
         PARAM1
     </body>
     </html>
@@ -86,7 +87,7 @@ namespace SlackHistory
         {
             using (WebClient client = new WebClient())
             {
-                string response = client.DownloadString("https://slack.com/api/users.list?token=xoxp-26200241765-57896078608-64729098982-940f37bca0");
+                string response = client.DownloadString("https://slack.com/api/users.list?token=xoxp-123456");
                 UserWrapper wrapper = new JavaScriptSerializer().Deserialize<UserWrapper>(response);
                 foreach (var member in wrapper.members)
                 {
@@ -99,7 +100,7 @@ namespace SlackHistory
         {
             using (WebClient client = new WebClient())
             {
-                string response = client.DownloadString("https://slack.com/api/channels.list?token=xoxp-26200241765-57896078608-64729098982-940f37bca0");
+                string response = client.DownloadString("https://slack.com/api/channels.list?token=xoxp-123456");
                 ChannelWrapper wrapper = new JavaScriptSerializer().Deserialize<ChannelWrapper>(response);
 
                 foreach (var channel in wrapper.channels)
@@ -111,7 +112,7 @@ namespace SlackHistory
 
         static void getPosts(int i)
         {
-            var baseUrl = "https://slack.com/api/channels.history?token=xoxp-26200241765-57896078608-64729098982-940f37bca0&channel={0}&count=1000&inclusive=1&oldest={1}&latest={2}";
+            var baseUrl = "https://slack.com/api/channels.history?token=xoxp-123456&channel={0}&count=1000&inclusive=1&oldest={1}&latest={2}";
             DateTime baseDate = DateTime.Now.AddDays(-1 * i).ToUniversalTime();
             DateTime oldest = new DateTime(baseDate.Year, baseDate.Month, baseDate.Day, 0, 0, 0, DateTimeKind.Utc);
             DateTime latest = new DateTime(baseDate.Year, baseDate.Month, baseDate.Day, 23, 59, 59, DateTimeKind.Utc);
@@ -141,6 +142,7 @@ namespace SlackHistory
         static string handleMessages(MessageWrapper wrapper, string title)
         {
             var messagesHandled = new List<string>();
+            DateTime dt = DateTime.Now;
 
             for (int i=wrapper.messages.Count - 1; i>=0; i--)
             {
@@ -150,6 +152,8 @@ namespace SlackHistory
                 if (message.text.Contains("has left the channel")) continue;
 
                 var messageWithReplacements = message.text;
+
+                dt = long.Parse(message.ts.Split('.')[0]).FromUnixTime();
 
                 try
                 {
@@ -163,20 +167,19 @@ namespace SlackHistory
                     messageWithReplacements = message.text;
                 }
                 
-
                 messagesHandled.Add(
                         "<p class=\"messages\"><span class=\"username\">" + 
                         (message.user!=null?users[message.user].name:"??") + 
                         "</span><span class=\"time\"> " + 
-                        long.Parse(message.ts.Split('.')[0]).FromUnixTime().ToString("hh:mm") + 
+                        dt.ToString("hh:mm") + 
                         "</span> >> " + 
                         messageWithReplacements + 
                         "</p>");
             }
             if (messagesHandled.Count == 0)
-                return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", "NO MESSAGES :(");   
+                return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", "NO MESSAGES :(").Replace("PARAM2", dt.ToString("dd/MM/yyyy"));   
             else
-                return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", string.Join(Environment.NewLine, messagesHandled));   
+                return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", string.Join(Environment.NewLine, messagesHandled)).Replace("PARAM2", dt.ToString("dd/MM/yyyy"));   
         }
     }
 
