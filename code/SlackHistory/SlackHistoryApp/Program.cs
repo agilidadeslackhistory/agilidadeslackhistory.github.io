@@ -14,6 +14,8 @@ namespace SlackHistory
     class Program
     {
     	//replace token xoxp-26200241765-57896078608-64729098982-940f37bca0 by your own
+    	//look at saveFile to adjust the path
+    	
         static Dictionary<string, string> channels = new Dictionary<string, string>();
         static Dictionary<string, Member> users = new Dictionary<string, Member>();
         static string htmlTemplate =
