@@ -13,9 +13,9 @@ namespace SlackHistory
 {
     class Program
     {
-    	//replace token xoxp-123456 by your own
-    	//look at saveFile to adjust the path
-    	
+        //replace token xoxp-123456 by your own
+        //look at saveFile to adjust the path
+
         static Dictionary<string, string> channels = new Dictionary<string, string>();
         static Dictionary<string, Member> users = new Dictionary<string, Member>();
         static string token = "xoxp-123456";
@@ -81,7 +81,7 @@ namespace SlackHistory
             getUsers();
             getChannels();
             //get only yesterday posts
-            getPosts(1);    
+            getPosts(1);
 
         }
 
@@ -125,13 +125,14 @@ namespace SlackHistory
                     string response = client.DownloadString(string.Format(baseUrl, channel.Key, oldest.ToUnixTime(), latest.ToUnixTime()));
                     MessageWrapper wrapper = new JavaScriptSerializer().Deserialize<MessageWrapper>(response);
                     var title = channel.Value + "." + DateTime.Now.AddDays(-1 * i).ToString("yyyyMMdd");
-                    var messages = handleMessages(wrapper, title, channel.Value);
+                    var messages = handleMessages(wrapper, title, channel.Value, baseDate);
                     saveFile(messages, channel.Value, title);
                 }
             }
         }
 
-        static void saveFile(string contents, string channel, string title){
+        static void saveFile(string contents, string channel, string title)
+        {
             var basePath = @"c:\temp\slack\";
             var currentFolder = Path.Combine(basePath, channel);
             if (!Directory.Exists(currentFolder)) Directory.CreateDirectory(currentFolder);
@@ -141,12 +142,12 @@ namespace SlackHistory
             File.AppendAllText(fileName, contents);
         }
 
-        static string handleMessages(MessageWrapper wrapper, string title, string channel)
+        static string handleMessages(MessageWrapper wrapper, string title, string channel, DateTime baseDate)
         {
             var messagesHandled = new List<string>();
-            DateTime dt = DateTime.Now;
+            DateTime dt = baseDate;
 
-            for (int i=wrapper.messages.Count - 1; i>=0; i--)
+            for (int i = wrapper.messages.Count - 1; i >= 0; i--)
             {
                 var message = wrapper.messages[i];
 
@@ -161,7 +162,7 @@ namespace SlackHistory
                 {
                     messageWithReplacements = Regex.Replace(messageWithReplacements, "<(http[s]?://.*?)\\|(.*?)>", m => "<a href=\"" + m.Groups[1].Value + "\">" + m.Groups[2].Value + "</a>");
                     messageWithReplacements = Regex.Replace(messageWithReplacements, "<(http[s]?://.*?)>", m => "<a href=\"" + m.Groups[1].Value + "\">" + m.Groups[1].Value + "</a>");
-                    
+
                     messageWithReplacements = Regex.Replace(messageWithReplacements, "<@(.*?)\\|(.*?)>", m => "@" + m.Groups[2].Value);
                     messageWithReplacements = Regex.Replace(messageWithReplacements, "<@(.*?)>", m => "<span class=\"cite\">@" + users[m.Groups[1].Value].name + "</span>");
                     messageWithReplacements = Regex.Replace(messageWithReplacements, "<#C(.*?)\\|(.*?)>", m => "#" + m.Groups[2].Value);
@@ -171,20 +172,20 @@ namespace SlackHistory
                 {
                     messageWithReplacements = message.text;
                 }
-                
+
                 messagesHandled.Add(
-                        "<p class=\"messages\"><span class=\"username\">" + 
-                        (message.user!=null?users[message.user].name:"??") + 
-                        "</span><span class=\"time\"> " + 
-                        dt.ToString("HH:mm") + 
-                        "</span> >> " + 
-                        messageWithReplacements + 
+                        "<p class=\"messages\"><span class=\"username\">" +
+                        (message.user != null ? users[message.user].name : "??") +
+                        "</span><span class=\"time\"> " +
+                        dt.ToString("HH:mm") +
+                        "</span> >> " +
+                        messageWithReplacements +
                         "</p>");
             }
             if (messagesHandled.Count == 0)
-                return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", "NO MESSAGES :(").Replace("PARAM2", channel + " .:. " + dt.ToString("dd/MM/yyyy"));   
+                return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", "NO MESSAGES :(").Replace("PARAM2", channel + " .:. " + dt.ToString("dd/MM/yyyy"));
             else
-                return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", string.Join(Environment.NewLine, messagesHandled)).Replace("PARAM2", channel + " .:. " + dt.ToString("dd/MM/yyyy"));   
+                return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", string.Join(Environment.NewLine, messagesHandled)).Replace("PARAM2", channel + " .:. " + dt.ToString("dd/MM/yyyy"));
         }
     }
 
@@ -318,6 +319,6 @@ namespace SlackHistory
             return Convert.ToInt64((date.ToUniversalTime() - epoch).TotalSeconds);
         }
     }
-#endregion
+    #endregion
 
 }
