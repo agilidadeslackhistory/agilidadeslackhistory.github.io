@@ -1,0 +1,103 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>kanban.20160901</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>kanban .:. 01/09/2016</h1>
+        <p class="messages"><span class="username">rodrigoy</span><span class="time"> 22:01</span> >> Demand shaping de bugs é outra coisa. Desculpe usar o método socrático, mas, já viram vários pensadores de desenvolvimento de software do sec XXI, dizendo "qualidade é inegociável" né? 
+
+Por que qualidade é inegociável?</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 22:06</span> >> Veeesh...aí vai pra filosofia. Eu sou daqueles que preza qualidade, mas entendo o viés de "negociar" e contexto. Acho que quando se diz "qualidade inegociável" se quer dizer que faremos o melhor, com profissionalismo, boas práticas e conhecimentos ao alcance.</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 23:16</span> >> <a href="https://twitter.com/lki_dja/status/771118619652657157">https://twitter.com/lki_dja/status/771118619652657157</a></p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 23:17</span> >> Me parece que as acusações de formar uma organização para espalhar uma abordagem não é necessariamente ganhar dinheiro fácil, né? Como alguns aqui já acusaram...</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 08:28</span> >> Ooooolocooo, golpe. Quem acusou? </p>
+<p class="messages"><span class="username">luizrodrigues</span><span class="time"> 10:28</span> >> Ele apagou o tweet, <span class="cite">@rodrigoy</span> ? Procurei aqui e não encontrei...</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 10:34</span> >> <span class="cite">@luizrodrigues</span> Me parece que as coisas mudaram... Ele vai ficar como Chairman mas com responsabilidades bastante reduzidas.</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 12:26</span> >> Larga o osso</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 12:43</span> >> <span class="cite">@rafajagua</span> Que mágoa hein?</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 13:04</span> >> É só brincadeira</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 13:04</span> >> :joy: </p>
+<p class="messages"><span class="username">mac.araujo</span><span class="time"> 14:08</span> >> Assisti o vídeo que o <span class="cite">@rodrigoy</span> postou ontem. Fiquei com uma dúvida, se separar em 2 raias (bugs e funcionalidades), como os implementadores sabem a prioridade? Entendo que dessa forma são duas fontes de demandas com suas devidas priorizações? divide a equipe entre as 2 raias?</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 14:15</span> >> <span class="cite">@mac.araujo</span> Com WIP limitado isso geralmente não é um problema. A priorização acontece no começo do processo somente. Dentro do processo a prioridade é entregar sempre o que está mais próximo de ser entregue. Geralmente num kanban são os cartões mais a direita no quadro. As reuniões diárias ajudam na tática de "fazer fluir".</p>
+<p class="messages"><span class="username">mac.araujo</span><span class="time"> 14:21</span> >> mas, no momento de puxar uma demanda para o doing, como o implementador decide se vai puxar um bug ou funcionalidade? No caso ele tem que olhar as duas raias e ver o que tem um "prazo" menor e puxar? (considerando que o doing está menor que o wip nas duas raias).</p>
+<p class="messages"><span class="username">jennifer.rodrigues</span><span class="time"> 14:31</span> >> Acho que vai do comum acordo entre os membros do time, né? 
+Por exemplo, em vários times nos quais eu trabalhei, resolver bug que está em ambiente de Produção é prioridade absoluta.</p>
+<p class="messages"><span class="username">jennifer.rodrigues</span><span class="time"> 14:31</span> >> A prioridade, na verdade, é evitar que esse bug chegue em Produção, mas se chegar...</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 14:39</span> >> <span class="cite">@mac.araujo</span> Entendi... uma das coisas que é prática no Kanban mas é pouco discutido são as políticas explícitas. Você pode ter uma regra como:
+
+- Puxa da raia que tiver menor WIP
+- Essa semana zézinho só puxa bug (essa é ruim, mas pode ser)
+- A cada dois bugs que você puxou, puxa uma story
+- Usar um Token (imagina um sinalizador (um botão, um post it) que está na raia de cima, ele está sinalizando que a próxima deve ser puxada dali. Após puxar colocar o sinalizador na raia de baixo) - É como funciona uma rede Token-ring.
+- Discutir como a <span class="cite">@jennifer.rodrigues</span> mencionou
+
+Note que priorizar é colocar a demanda na primeira coluna. O que chamamos de replenishing (ou momento Spice Girls - Tell what you want, what you really really want).  O que você perguntou é o pulling strategy.</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 14:40</span> >> e a estratégia de ter uma raia "URGENTE"? faz mais mal que bem?</p>
+<p class="messages"><span class="username">mac.araujo</span><span class="time"> 14:42</span> >> Aqui temos uma raia urgente, mas, entendemos que urgente é diferente de bug. Urgente é o que alguém (PO, Cliente,...) define que defe ser feito pra ontem.</p>
+<p class="messages"><span class="username">mac.araujo</span><span class="time"> 14:44</span> >> <span class="cite">@rodrigoy</span>, verdade! agora lembrei que no teu curso, vc disse que o kanban não impõe nada, podemos definir regras conforme a necessidade...</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 14:45</span> >> yep, seria um nome qq para bugs que precisam ser resolvidos *agora*</p>
+<p class="messages"><span class="username">mac.araujo</span><span class="time"> 14:45</span> >> não só bug! pode ser uma funcionalidade que vai dá vantagem competitiva!</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 14:46</span> >> eu acho que isto é ruim e quando usei sempre desviava-se do propósito</p>
+<p class="messages"><span class="username">jennifer.rodrigues</span><span class="time"> 14:46</span> >> Legal esse raciocínio. Eu penso que bug em prod pega super mal, mas vantagem competitiva é vantagem competitiva.</p>
+<p class="messages"><span class="username">mac.araujo</span><span class="time"> 14:56</span> >> <span class="cite">@sergio.giraldo</span>  é, essa raia "emergência" quem alimenta ela tem que ter uma maturidade, senão, tudo é emergência! o Wip dela também deve ser limitado, de preferência em 1.</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 15:00</span> >> <span class="cite">@sergio.giraldo</span> A classe de serviço "Expedite" é uma característica central de um sistema kanban. Como o <span class="cite">@mac.araujo</span> falou limite restritivo no WIP dessa classe de serviço dá opcionalidade e faz o sistema se adaptar as necessidades do mercado.
+
+Vários dos meus clientes usam e os dados que tenho é que depois de um tempo esse tipo de demanda diminui bastante com a maturidade. Bugs emergenciais diminuem porque a qualidade aumenta. Demandas de negócio e oportunidades urgentes diminuem porque o Lead Time geral do sistema também diminui.</p>
+<p class="messages"><span class="username">walteramorim</span><span class="time"> 15:20</span> >> eu uso expedite. começou a funcionar bem melhor quando juntamos ao token que é uma toca viking tipo essa abaixo. a cada 15 dias ela troca de pessoa. quem tá com a toca é responsavel por pegar os bugs criticos, responder a chamados N3, ajustar builds, etc. depois de um tempo realmente reduziu bastante a demanda, e agora é cerca de só 30% nessas tarefas.
+<a href="http://mlb-s2-p.mlstatic.com/330621-MLB20812987074_072016-Y.jpg">http://mlb-s2-p.mlstatic.com/330621-MLB20812987074_072016-Y.jpg</a></p>
+<p class="messages"><span class="username">walteramorim</span><span class="time"> 15:21</span> >> como a sala da equipe é meio fria, quem é careca leva vantagem :smile:</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 16:01</span> >> <span class="cite">@walteramorim</span> Tá falando sério?</p>
+<p class="messages"><span class="username">mac.araujo</span><span class="time"> 16:08</span> >> Um capacete de bombeiro também caíria bem.</p>
+<p class="messages"><span class="username">walteramorim</span><span class="time"> 19:27</span> >> serio hehehehe</p>
+<p class="messages"><span class="username">walteramorim</span><span class="time"> 19:28</span> >> <span class="cite">@rodrigoy</span> nao é obrigado a usar, pode deixar no cantinho da baia tbm hehehehe</p>
+<p class="messages"><span class="username">walteramorim</span><span class="time"> 19:29</span> >> <span class="cite">@mac.araujo</span>  boa!</p>
+<p class="messages"><span class="username">jennifer.rodrigues</span><span class="time"> 19:33</span> >> <span class="cite">@walteramorim</span> deixar no cantinho da baia, só pra sinalizar pra quem tá procurando o chapéu hahahahhahaha
+Essa opção salva muuuuuuuuita gente que pode não estar na vibe. :+1:</p>
+<p class="messages"><span class="username">walteramorim</span><span class="time"> 19:35</span> >> na hora que o bicho pega nao tem pra onde correr nao hhehehehe</p>
+    </body>
+    </html>

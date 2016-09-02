@@ -1,0 +1,90 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>arquitetura.20160901</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>arquitetura .:. 01/09/2016</h1>
+        <p class="messages"><span class="username">andersonhummel</span><span class="time"> 15:22</span> >> Como vcs descrevem RNF ?</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 16:00</span> >> <a href="https://agilidade.slack.com/archives/jaba/p1472754090000068">https://agilidade.slack.com/archives/jaba/p1472754090000068</a></p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 16:02</span> >> um caso que gosto de contar é do grooveshark. eles decidiram usar p2p como forma de distribuição, construíram tudo em torno disto e depois foram processados devido a esta escolha</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 16:03</span> >> e aí era tarde para mudar, torraram tudo com acordos judiciais e fecharam :disappointed:</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 16:37</span> >> Sim...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 16:37</span> >> esse caso é bem famoso mesmo...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 16:38</span> >> Mas depois P2P virou base para um monte de aplicação</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 16:42</span> >> engenharia reversa evoluiu muito mesmo. meu ponto é que em termos de arquitetura de software, diagramas valem mais que mil linhas, código não está no nível de abstração adequado para conversar sobre arquitetura</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 16:42</span> >> e isto é mais verdade se estamos falando em arquitetura emergente onde o conhecimento evolui ao longo das iterações</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 16:44</span> >> Sim, mas a maioria dos problemas que tive não foram relacionados a confecção dos diagramas mas em segui-los</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 16:44</span> >> Ou melhor, seguir o combinado</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 16:45</span> >> architecture reconstruction FTW</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 16:49</span> >> eu apenas brinquei com isto e pode ser um canhão para uma formiga, quando estudei isto era :slightly_smiling_face:</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 16:49</span> >> <a href="http://resources.sei.cmu.edu/library/asset-view.cfm?assetID=6255">http://resources.sei.cmu.edu/library/asset-view.cfm?assetID=6255</a></p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 16:49</span> >> é de 2003 e o SEI lançou um artigo há uma semana, mais atual impossível</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 16:49</span> >> Eu gosto do SEI, mas tem mt coisa q é canhão pra matar formiga...</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 16:49</span> >> <a href="http://www.sei.cmu.edu/architecture/research/previousresearch/reconstruction.cfm">http://www.sei.cmu.edu/architecture/research/previousresearch/reconstruction.cfm</a></p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 16:50</span> >> `Eu gosto do SEI, mas tem mt coisa q é canhão pra matar formiga` exato!!!!!</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 16:50</span> >> E olha q tenho uns 3 livros físicos em casa ;)</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 16:51</span> >> Tenho usado o Quality Attribute Scenario pra descrever RNF em backlog. Já usaram? faz sentido pra vcs tbm?</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 16:52</span> >> eu gosto, o livro do Bass é um dos meus prefeirdos para uma primeira abordagem de RNF</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 16:52</span> >> Qual deles?</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 16:53</span> >> Software Architecture in Practice</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 16:54</span> >> Vou dar uma olhada...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 16:55</span> >> Ainda acho o Quality Attribute Scenario mega útil pra descrever, mas não sei se tem coisa melhor</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 16:56</span> >> <a href="https://www.cs.unb.ca/~wdu/cs6075w10/sa2.htm">https://www.cs.unb.ca/~wdu/cs6075w10/sa2.htm</a></p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 16:59</span> >> pode colocar livro aqui?</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 17:00</span> >> tá na mão</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 17:00</span> >> apaga se for caô</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 17:01</span> >> Valeu, vou dar uma olhada :slightly_smiling_face:</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 17:02</span> >> Apagando pra não dar treta...</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 17:03</span> >> pronto :slightly_smiling_face:</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 17:03</span> >> eu tenho os outros do clements...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 17:05</span> >> Ahhh...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 17:05</span> >> Tem o quality attribute scenario tbm</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 17:05</span> >> :slightly_smiling_face:</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 17:25</span> >> Os RNF neste livro são descritos como patterns, bem útil</p>
+    </body>
+    </html>

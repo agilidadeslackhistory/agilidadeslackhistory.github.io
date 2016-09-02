@@ -1,0 +1,88 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>jaba.20160901</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>jaba .:. 01/09/2016</h1>
+        <p class="messages"><span class="username">rafajagua</span><span class="time"> 08:41</span> >> </p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 08:41</span> >> </p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 08:41</span> >> </p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 08:42</span> >> </p>
+<p class="messages"><span class="username">thiagonascimento.rj</span><span class="time"> 13:31</span> >> <span class="cite">@yoris</span>: A documentação é importante não apenas para transferir conhecimento, mas também para auditoria de desenvolvimento de software em todas as etapas, importante para alcançar modelos de maturidade de software afim de obter certificações de qualidade.
+Além disso, toda tomada de decisão é baseada em fatos.  E contra fatos não há argumentos. 
+Um documento é importante não só para mostrar que se tem algo em um papel ou armazenado em arquivo lógico, pois a evolução do ciclo de vida um software passa necessáriamente por toda a sua informações documentadas. 
+E quando digo documentação não digo apenas diagramas de classes. Me refiro a processos, requisitos, análise financeira de custos, processos de gerenciamentos de projetos e muito outros. 
+Existem outras questões que envolvem a documentação, em especial na área de software. 
+Caso se interesse, pode buscar mais conhecimento sobre o assunto. </p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 13:44</span> >> <span class="cite">@thiagonascimento.rj</span> já tive uma visão parecida com a sua, e em um passado distante li de forma detalhada as especificações UML.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 13:44</span> >> A minha visão hoje é que a melhor documentação de um software é codigo bem escrito do ponto de vista de design da aplicação.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 13:45</span> >> Existem outros documentos que podem ou não ser utilizados dependendo da forma de contratação.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 13:46</span> >> Ex.:
+Se vc vende escopo, vc precisa de um conjunto de documentos que detalhem previamente esse escopo e que mostrem que vc está aderente ao contrato.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 13:46</span> >> Se vc vende horas homem, vc precisa de um conjunto de documentos que detalhem e embasem essa visão.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 13:48</span> >> Já do ponto de vista de analise de riscos, segurança da aplicação, vai depender mais do contexto que vc vai estar inserido</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 13:48</span> >> se vc estiver trabalhando em um ambiente que tenha q atender SOX e Basileia vc precisa de um conjunto de documentos.</p>
+<p class="messages"><span class="username">thiagonascimento.rj</span><span class="time"> 13:49</span> >> <span class="cite">@andersonhummel</span>: Acredito que a documentação de software vai muito além de código documentado e diagramas de classe.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 13:49</span> >> Se vc estiver em um ambiente da área de saude vai precisar verificar com a Anvisa, ANS, ou algum outro orgão regulamentador.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 13:52</span> >> <span class="cite">@thiagonascimento.rj</span> concordo que exitem outros documentos, a questão é que depende do contexto.</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 14:18</span> >> vdd, <span class="cite">@andersonhummel</span> depende do contexto e é por isto que discordo que a melhor documentação é o código. e não depende só da contratação, eu faço uma defesa muito forte da documentação da arquitetura do software e uma gestão das decisões arquiteturais. aqui estamos em um slack de agilidade e a tônica vigente neste mundo é arquitetura emergente. existe uma amplitude que vai de bduf a 100% emergente, no meio você precisa saber porque tomou certas decisões, você precisa saber quais decisões foram tomadas e fracassaram, você precisa quais os débitos técnicos que compramos. nada disto está no código. código é ótimo mas não é tudo</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 14:19</span> >> quanto ao como, aí vale tudo, desde foto até uml :slightly_smiling_face:</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 15:21</span> >> <span class="cite">@sergio.giraldo</span> o meu maior ponto sobre o código é que adianta vc ter uma documentação linda se o código não tem padronização e a semanatica é 0.
+
+A maior partes das ferramentas hoje em dia permitem que você extraia os diagramas a partir de código um código bem feito vai te ajudar com isso. Um conjunto de testes automatizados bem escritos vai te ajudar na documentação. E se vc usa um gerenciador de versão razoavel da pra entender o passado.
+
+Já decisões arquiteturais e de documentação de arquitetura, eu compreendo sua insatisfação pois tambem tenho a msm. Já vi decisões pessimas arquiteturais péssimas embasadas por achismo ou por excelentes relatorios :slightly_smiling_face:</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 15:21</span> >> Mas concordo que esse é um outro aspecto na documentação. Talvez eu não tenha sido claro o suficiente... 
+A questão qual é a necessidade de ter um determinado documento? Pois existe o custo da criação e o custo da manutenção do documento...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 15:21</span> >> ( @arquitetura )</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 15:55</span> >> /gif build and they will come</p>
+<p class="messages"><span class="username">??</span><span class="time"> 15:55</span> >> </p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 15:56</span> >> indo para o canal</p>
+<p class="messages"><span class="username">luizrodrigues</span><span class="time"> 19:44</span> >> Esta discussão de documentação foi migrada para o #arquitetura? Eu ia falar algo sobre o assunto, mas fiquei em dúvida se falo aqui ou lá. <span class="cite">@andersonhummel</span> <span class="cite">@sergio.giraldo</span></p>
+    </body>
+    </html>
