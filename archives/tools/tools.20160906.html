@@ -1,0 +1,82 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>tools.20160906</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>tools .:. 06/09/2016</h1>
+        <p class="messages"><span class="username">hamiltoncolares</span><span class="time"> 23:08</span> >> <span class="cite">@andresuman</span>: infelizmente não conheço opção free. Eu tenho que ralar pra produzir alguns gráficos com base no trello, ter uma ferramenta dessas facilitaria demais as coisas. Por isso, tô dentro dessa empreitada aí sugerida pelo <span class="cite">@luizrodrigues</span>   :joy:</p>
+<p class="messages"><span class="username">hamiltoncolares</span><span class="time"> 23:10</span> >> Se quiserem dar uma olhada, não sei se já foi passada por aqui, existe uma opção nacional que é bem interessante também. </p>
+<p class="messages"><span class="username">hamiltoncolares</span><span class="time"> 23:10</span> >> <a href="http://planrockr.com/pt-br/">http://planrockr.com/pt-br/</a></p>
+<p class="messages"><span class="username">hamiltoncolares</span><span class="time"> 23:11</span> >> Eles ainda não tem gráficos, mas conversei com eles e me disseram que já está no roadmap e deve ser lançado em breve. Também não é free. Ele integra com outras ferramentas como GitHub. </p>
+<p class="messages"><span class="username">eminetto</span><span class="time"> 08:47</span> >> Opa, blz pessoal? Eu sou um dos criadores do Planrockr, se eu puder ajudar em qualquer coisa estou a disposição</p>
+<p class="messages"><span class="username">eminetto</span><span class="time"> 09:10</span> >> só complementando a informação, o Planrockr tem uma conta free e contas premium com algumas features extras :wink:</p>
+<p class="messages"><span class="username">andresuman</span><span class="time"> 09:15</span> >> legal <span class="cite">@eminetto</span> , vou colocar aqui no meu backlog de ferramentas, para analisar. :slightly_smiling_face:</p>
+<p class="messages"><span class="username">eminetto</span><span class="time"> 09:16</span> >> Se alguém quiser uma conta premium por 15 dias é só me avisar :wink:</p>
+<p class="messages"><span class="username">dwildt</span><span class="time"> 11:30</span> >> Oi pessoal. Quem está usando Slack no trabalho com terceiros? 
+Hoje tenho o slack para a empresa, mas fico pensando agora em criar um slack para poder falar com terceiros. 
+A ideia é poder dar a eles interface para poder chamar build dos projetos que eles se envolvem e também manter comunicação. 
+
+Alguém já passou por isto?</p>
+<p class="messages"><span class="username">dwildt</span><span class="time"> 11:31</span> >> O plano imediato seria fazer os canais do slack ficarem todos fechados e aí consigo controlar quem pode estar em cada canal.</p>
+<p class="messages"><span class="username">dwildt</span><span class="time"> 11:34</span> >> Outro plano seria criar outro "ambiente" slack para colocar só os terceiros, mas aí senti um "smell"</p>
+<p class="messages"><span class="username">andresuman</span><span class="time"> 11:38</span> >> <a href="https://get.slack.help/hc/en-us/articles/201314026-Roles-and-permissions-in-Slack">https://get.slack.help/hc/en-us/articles/201314026-Roles-and-permissions-in-Slack</a></p>
+<p class="messages"><span class="username">andresuman</span><span class="time"> 11:39</span> >> <span class="cite">@dwildt</span> tem o modo "guest"</p>
+<p class="messages"><span class="username">andresuman</span><span class="time"> 11:41</span> >> Deixar todos os canais fechados me parece uma má ideia. Uma coisa legal é a pessoa sair e entrar a qualquer momento, no canal que precisar. Colocar esses "terceiros" como "guest" me parece resolver seu problema, sem maiores efeitos colaterais. (Eu não tenho experiência com isso, só vi no Help do Slack mesmo, rs)</p>
+<p class="messages"><span class="username">hamiltoncolares</span><span class="time"> 12:12</span> >> <span class="cite">@dwildt</span> estava pensando sobre isso ontem mesmo e querendo fazer o mesmo. Esbarrei nos mesmos problemas. As duas opções que você falou, que também eram as minhas, me parecem criar segregação e um trabalho extra para manter quem acessa o que, que não valeria o esforço.
+Vou dar uma olhada no que o <span class="cite">@andresuman</span> postou para ver se alguma luz aparece.</p>
+<p class="messages"><span class="username">eminetto</span><span class="time"> 13:51</span> >> <span class="cite">@dwildt</span> na Coderockr nós criamos canais para cada cliente e usamos estes canais para integrar coisas como builds, erros, commits, e discussões sobre as tarefas em si. Tem funcionado legal. Escrevi um post sobre isso <a href="https://blog.coderockr.com/como-usamos-o-slack-na-coderockr-d7420b2575d5#.s0m9w9kuv">https://blog.coderockr.com/como-usamos-o-slack-na-coderockr-d7420b2575d5#.s0m9w9kuv</a></p>
+<p class="messages"><span class="username">hamiltoncolares</span><span class="time"> 17:43</span> >> <span class="cite">@eminetto</span> mas vocês restringem o acesso dos clientes a esses canais? é possível fazer isso? Dizer que determinado usuário somente acessa um canal?</p>
+<p class="messages"><span class="username">eminetto</span><span class="time"> 17:55</span> >> deixo o canal privado e incluo eles no canal de cada projeto. e mantenho alguns canais públicos</p>
+<p class="messages"><span class="username">hamiltoncolares</span><span class="time"> 18:02</span> >> Acho que entendi. Vou dar uma olhada em como o nosso está e verificar se faria sentido.</p>
+<p class="messages"><span class="username">hamiltoncolares</span><span class="time"> 18:03</span> >> nesse caso, você controla somente os canais privados. Ou seja, um cliente pode ver o que acontece no canal do outro, certo?</p>
+<p class="messages"><span class="username">eminetto</span><span class="time"> 18:10</span> >> @eminetto uploaded a file: <a href="https://agilidade.slack.com/files/eminetto/F28PS187M/screen_shot_2016-09-06_at_6.10.34_pm.png">Screen Shot 2016-09-06 at 6.10.34 PM.png</a></p>
+<p class="messages"><span class="username">eminetto</span><span class="time"> 18:11</span> >> crio ele assim, privado. então os clientes só podem entrar nele por convite</p>
+<p class="messages"><span class="username">hamiltoncolares</span><span class="time"> 18:38</span> >> E ficam restritos a esse canal? Isso que não tô entendendo. Por que você tem outros canais abertos, certo?</p>
+<p class="messages"><span class="username">eminetto</span><span class="time"> 20:27</span> >> sim, eles podem entrar em outros canais abertos. Eu não vejo problemas nisso :slightly_smiling_face:</p>
+    </body>
+    </html>

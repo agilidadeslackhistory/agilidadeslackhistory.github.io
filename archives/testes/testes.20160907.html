@@ -1,0 +1,110 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>testes.20160907</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>testes .:. 07/09/2016</h1>
+        <p class="messages"><span class="username">paulofurtado</span><span class="time"> 21:54</span> >> Então… talvez o que eu precise seja só “encontrar a ponta do barbante”, para desenrolar o resto. 
+Eu já tenho uma equipe que desenvolve iOS com Swift.   Agora, preciso preparar o time para o seguinte:
+1. Implementar novas features no App
+2. Antes de enviar pro Test Flight para testes externos, eu gostaria de fazer uma bateria de testes automatizados
+3. Uma vez que os testes passem, jogo esse código no TestFlight para testes de alguns usuários. 
+
+Meu passo 2 acima é o que eu queria automatizar.  A dúvida é saber o que indicar para o time pesquisar, uma vez que esse app é uma startup e precisamos de certa rapidez para colocar em produção.  Quanto menos tempos perdermos entre o desenvolvimento e a publicação, melhor… Nós ainda temos que lidar com pequenas falhas que aparecem em versões seguintes, que não apareceram em versões anteriores.</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 22:39</span> >> Ok. Esse app é auto-contido? Sem dependencias externas?
+
+Tem testes unitários?
+
+Tu tem noção de quais áreas da aplicação são mais relevantes para o usuário?
+
+Quais áreas da aplicação são mais relevantes para o negócio?
+
+Atualmente o teste é manual? Quais os testes mais demorados "manualmente" no app?
+
+
+
+....</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 22:41</span> >> Teste de interface resolve?
+
+Tem lógica no app ou é um dummy front end de uma camada de serviços?
+
+A ideia é ter uma suite de testes focadas em jornadas do usuario ou com o foco nas funcionalidades?</p>
+<p class="messages"><span class="username">paulofurtado</span><span class="time"> 06:49</span> >> Boa <span class="cite">@motta</span>, seguinte:
+1. O App tem dependência externa, uma vez que boa parte das informações são cadastradas via uma interface WEB.  O app faz a apresentação dos dados e permite interações do usuário que refletem em um banco de dados remoto. 
+2. Ainda não começamos a fazer testes unitários.  Alguma boa referência de estudo?
+3. Que tipo de resposta você esperaria de mim em resposta a pergunta: Quais as áreas de aplicação são mais relevantes para o usuário e para o negócio?
+4. Atualmente, os testes são manuais.   
+5. Acredito que teste de interface ajude.  Alguma boa referência de estudo?
+6. Tem lógica no App
+7. Inicialmente, testes focados nas funcionalidades, mas não estou certo disso.</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 13:48</span> >> 1. Testa a rodo essa interface WEB. Vai ser mais fácil criar uma suite funcional para esta interface do que no app mobile.
+
+1b. Eu recomendo você criar suites de testes separadas para serem executadas em momentos separados (ex: os testes unitarios da interface web e do app mobile devem ser executados pelos devs antes do commit e automaticamente pelo CI... A suite funcional pode estar completa no CI ou só uma parte da suite.. O resto pode estar sendo executado sob demanda ou até mesmo em uma pipeline a parte da geração dos pacotes/binários</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 13:48</span> >> 2. Nunca trabalhei com Swift, fiz uma leitura dinâmica nesse link aqui: <a href="https://www.appcoda.com/unit-testing-swift/">https://www.appcoda.com/unit-testing-swift/</a> parece útil</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 13:51</span> >> 
+3. Eu esperaria uma lista priorizada de funcionalidades. Pensa em uma locadora, talvez a funcionalidade de busca seja uma das mais importantes, dado que o meu cliente vai procurar o filme que ele quer, não vai encontrar e vai questionar o funcionário da locadora... Essa funcionalidade me faz alugar mais filmes e atender melhor o cliente então eu deveria investir em automação nela (tambem porque testar manualmente uma busca pode exigir um tempo e um esforço muito grande)</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 13:53</span> >> 5. Tenho escutado bastante gente trabalhar com o Appium, inclusive uma das equipes que eu acompanho <a href="http://appium.io">http://appium.io</a> o <span class="cite">@rsaccoll</span> talvez tenha referências/sugestões melhores</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 13:54</span> >> 6. Lógica no app = testes unitários no código go app \o/
+</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 17:54</span> >> <span class="cite">@paulofurtado</span> Então. Um lista do que tem que SEMPRE estar rolando independente de novas features (ou ajustes) é uma boa para ter um norte de como ter uma suite de testes. Provavelmente que anda fazendo esses testes manualmente já tem em mente coisas que são repetitivas e vale deixar automatizado. Acho que sem ter essa situação resolvido de nada adianta falar em automação. Eu ando em uma "vibe" que gosto de deixar todo mundo meio que junto na execução. Isso é fase beta, então deixa quieto..eeheheh. Sobre ferramentas para automação, isso é algo para analisar quem vai fazer essa tarefa. Se são os desenvolvedores, recomendo o framework que tem no xcode , XCTest. Pois fica junto ao código e o tempo de execução dele é bem mais interssante. Existe uma questão chata em execução em paralelo, mas tem como contornar...Se vai ser a equipe que testa, tem que analisar se eles tem skills de mexer com código e criar coisas com appium (ou calabash) ..Esses dois são bem interessantes e podem ajudar gente com menos skills de desenvolvimento.</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 17:55</span> >> Se o problema vai ser onde rodar, dá uma olhada no greenhouseCI, 
+<a href="https://greenhouseci.com/">https://greenhouseci.com/</a></p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 17:56</span> >> a proposta deles é bem interessante e eu já andei usando em projetos de teste aqui..</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 18:04</span> >> Só um adendo sobre o que o <span class="cite">@rsaccoll</span> disse:
+Provavelmente o que você quer não é uma suite de testes e sim várias, com propósitos, escopos, granularidades e tempos de execução (feedback) diferentes (scenario based x assertion based x feature oriented x journey oriented x aceitação/negócio...)</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 18:05</span> >> O link que eu mandei ali mais cedo tambem era utilizando XCTest</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 18:09</span> >> Sim, que 80% do exemplos mostram testes unitários, mas tem 3 classes marotas ali que rodam com funcionais..hehhehhe E sobre suite, tentei mais em direcionar para coisas que tem sempre que funcionar... Muitas vezes pegamos várias técnicas de elaboração e no fim de contas esquecemos algumas premissas básicas na hora de ter algo sólido e sempre rodando..</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 19:02</span> >> Meu deus, não da tempo hábil pra responder….</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 19:02</span> >> :joy:</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 19:05</span> >> <a href="http://giphy.com/gifs/reaction-acj7QJGgBBeUg">http://giphy.com/gifs/reaction-acj7QJGgBBeUg</a></p>
+<p class="messages"><span class="username">motta</span><span class="time"> 19:55</span> >> Esse slack é do demo :japanese_ogre:</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 19:57</span> >> bah, eu fui ver como estava e vocês já tinham respondido tudo :stuck_out_tongue:</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 20:35</span> >> <a href="http://i.imgur.com/8UbVRPs.gifv">http://i.imgur.com/8UbVRPs.gifv</a></p>
+<p class="messages"><span class="username">motta</span><span class="time"> 20:57</span> >> <span class="cite">@elias.nogueira</span>: alguma coisa tu tem que discordar... Ehauehauwhua</p>
+    </body>
+    </html>
