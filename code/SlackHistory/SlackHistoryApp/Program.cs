@@ -80,8 +80,20 @@ namespace SlackHistory
         {
             getUsers();
             getChannels();
-            //get only yesterday posts
-            getPosts(1);
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
+            {
+                //get friday posts
+                getPosts(3);
+                //get saturday posts
+                getPosts(2);
+                //get sunday posts
+                getPosts(1);
+            }
+            else
+            {
+                //get only yesterday posts
+                getPosts(1);
+            }
 
         }
 
@@ -116,6 +128,7 @@ namespace SlackHistory
         {
             var baseUrl = "https://slack.com/api/channels.history?token=" + token + "&channel={0}&count=1000&inclusive=1&oldest={1}&latest={2}";
             DateTime baseDate = DateTime.Now.AddDays(-1 * i).ToUniversalTime();
+            Console.WriteLine("doing" + baseDate.ToShortDateString());
             DateTime oldest = new DateTime(baseDate.Year, baseDate.Month, baseDate.Day, 0, 0, 0, DateTimeKind.Utc);
             DateTime latest = new DateTime(baseDate.Year, baseDate.Month, baseDate.Day, 23, 59, 59, DateTimeKind.Utc);
             foreach (var channel in channels)
@@ -124,7 +137,7 @@ namespace SlackHistory
                 {
                     string response = client.DownloadString(string.Format(baseUrl, channel.Key, oldest.ToUnixTime(), latest.ToUnixTime()));
                     MessageWrapper wrapper = new JavaScriptSerializer().Deserialize<MessageWrapper>(response);
-                    var title = channel.Value + "." + DateTime.Now.AddDays(-1 * i).ToString("yyyyMMdd");
+                    var title = channel.Value + "." + baseDate.ToString("yyyyMMdd");
                     var messages = handleMessages(wrapper, title, channel.Value, baseDate);
                     saveFile(messages, channel.Value, title);
                 }
@@ -151,6 +164,7 @@ namespace SlackHistory
             {
                 var message = wrapper.messages[i];
 
+                if (message.text == null) continue;
                 if (message.text.Contains("has joined the channel")) continue;
                 if (message.text.Contains("has left the channel")) continue;
 
@@ -185,7 +199,7 @@ namespace SlackHistory
             if (messagesHandled.Count == 0)
                 return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", "NO MESSAGES :(").Replace("PARAM2", channel + " .:. " + dt.ToString("dd/MM/yyyy"));
             else
-                return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", string.Join(Environment.NewLine, messagesHandled)).Replace("PARAM2", channel + " .:. " + dt.ToString("dd/MM/yyyy"));
+                return htmlTemplate.Replace("PARAM0", title).Replace("PARAM1", string.Join(Environment.NewLine, messagesHandled)).Replace("PARAM2", channel + " .:. " + baseDate.ToString("dd/MM/yyyy"));
         }
     }
 
