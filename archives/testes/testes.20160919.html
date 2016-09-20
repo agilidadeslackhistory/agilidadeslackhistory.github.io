@@ -1,0 +1,85 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>testes.20160919</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>testes .:. 19/09/2016</h1>
+        <p class="messages"><span class="username">elias.nogueira</span><span class="time"> 11:00</span> >> <a href="https://testing.googleblog.com/2016/09/what-test-engineers-do-at-google.html">https://testing.googleblog.com/2016/09/what-test-engineers-do-at-google.html</a></p>
+<p class="messages"><span class="username">renatolochetti</span><span class="time"> 13:09</span> >> <span class="cite">@elias.nogueira</span> interessante o artigo do Google. Tenho bastante interesse em discutir como usar testes em um ambiente ágil e fiquei curioso com o que disse ali em cima sobre a parte de "Learn to read code that has been developed by developers". Qual perfil você acha ser o mais adequado para o papel de um QA? Valeu! :slightly_smiling_face:</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 13:10</span> >> Eu participei uma vez de uma seleção para um STE no Google. Na época existiam duas divisões...</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 13:11</span> >> O STE, resumindo, é um dev! Ele sabe codificar, automatizar testes e mesmo criar frameworks de teste para testar/automatizar algo se não existir uma ferramenta</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 13:12</span> >> O outro papel que eles tinham, se não me engano TE (Test Engineer) ou algo assim era mais um tester como nós estamos acostumados sem ter grandes conhecimentos de programação, automatizando e testando manualmente (teste exploratório) com visão mais de usuário e testes em níveis diferentes de unitário</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 13:13</span> >> O perfil mais adequado para a maioria das empresas no Brasil, na minha visão, é um perfil não tão técnico como o STE</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 13:15</span> >> STE , aqui no brasil,  vai pedir DevOps junto e o cara vai virar severino..</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 13:15</span> >> Tem que tomar cuidado...:trollface:</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 13:15</span> >> Pra mim um bom tester precisa:
+ - Saber com conversar com papéis de todos os níveis (dev, analistas, cliente)
+ - Tenha um bom conhecimento do negócio
+ - Saiba automatizar em níveis diferentes do unitário (API/Serviços, Web, Mobile)
+ - Tenha uma ação analítica sobre cada ciclo interno (CI) e entrega (CD)
+ - Que comunique muito com analistas e clientes, fazendo o papel do cliente sempre que necessário em termos de pensar em funcionalidade</p>
+<p class="messages"><span class="username">renatolochetti</span><span class="time"> 13:21</span> >> Eu já vi em algumas empresas esse job com pessoas que não programam. Nesse cenário a responsabilidade está toda em de fato usar o produto, passar os fluxos como um usuário real, mas acho que a função de construir fluxos de testes automáticos é mais importante do que isso. O que eu não sei é se essa função deveria pertencer ao devTeam propriamente dito ou se a um papel diferente...</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 14:59</span> >> Pra mim a função de construção de automação de testes deve pertencer sempre ao devteam</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 15:00</span> >> As vezes é o papel do tester construir isso, mas vezes do programador… depende muito da organização do time</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 17:39</span> >> ```
+- Saber com conversar com papéis de todos os níveis (dev, analistas, cliente)
+- Tenha um bom conhecimento do negócio
+- Saiba automatizar em níveis diferentes do unitário (API/Serviços, Web, Mobile)
+- Tenha uma ação analítica sobre cada ciclo interno (CI) e entrega (CD)
+- Que comunique muito com analistas e clientes, fazendo o papel do cliente sempre que necessário em termos de pensar em funcionalidade
+```
+Olha, não quero ser chatão…Mas quem atinge esse set de skills, parte para outra área rapidinho.. Mas né, é só minha opinião…. ¯\_(ツ)_/¯</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 17:49</span> >> pra qual área esta pessoa iria?</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 17:57</span> >> Olha, skills de CI e CD, junto com automação já podem de jogar a DevOps… Bom conhecimento dos negócios podem te jogar a PO ou fora do ramo de informática (depende muito da empresa..)
+E comunicação pode ser suporte..:trollface:</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 17:58</span> >> Até coach se quiser…A minha visão disso é que com esse tipo de capacidade, tu pode “começar a advogar outras coisa”…Ao invés de adquirir tudo isso e ficar fazendo a mesma função..</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 18:02</span> >> Mas devops não é uma cultura?</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 18:02</span> >> CI e CD fazem parte de qualquer contexto ágil “que se preste” atualmente</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 18:03</span> >> Um time ágil sem conhecimento de negócio não consegue desenvolver nada (em relação a ter conhecimento de negocio e ser um PO… que são coisas completamente diferentes)</p>
+    </body>
+    </html>
