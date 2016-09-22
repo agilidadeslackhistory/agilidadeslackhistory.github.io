@@ -1,0 +1,202 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>kanban.20160921</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>kanban .:. 21/09/2016</h1>
+        <p class="messages"><span class="username">victor</span><span class="time"> 21:09</span> >> So precisa tomar cuidado com o custo... Pra não acreditar que se o cmd tá baixo eh uma boa coisa - pois vai faltar mais informação sobre custo... </p>
+<p class="messages"><span class="username">victor</span><span class="time"> 21:10</span> >> Vc pode estar considerando custos não suficientes :)</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 21:10</span> >> Agora, uma coisa que me veio a cabeça: a métrica cria o incentivo de mandar o gohorse e entregar muito mais do que o esperado... Por isso acredito que *não deve ser a única métrica* usada</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 21:11</span> >> Tem que juntar nos radiators</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:11</span> >> Pois é.. CMD não é suporte para decisões financeiras não operacionais.. </p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:11</span> >> Como está na fórmula, não é o custo inteiro da empresa.. </p>
+<p class="messages"><span class="username">victor</span><span class="time"> 21:12</span> >> Estamos hoje indo atrás de colocar todo o custo</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 21:12</span> >> O real mesmo</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:12</span> >> Para isso estão usando uma variação do CMD, em conjunto com outras métricas para suporte a este tipo de decisão.. Como eu disse, outros 500</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:13</span> >> Pode ser útil sim.. É uma adaptação válida.. </p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:15</span> >> Pros estudos nas empresas que trabalho, para este histograma, por exemplo, é indiferente e um complicador desnecessário.. </p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:16</span> >> Eu não preciso do custo completo para saber que 73%  das amostras de CMD estão na segunda faixa.. Só preciso que a forma de cálculo de mantenha.. </p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:16</span> >> Mas como o VH bem lembrou,isso não é o custo da empresa.. </p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:18</span> >> E nem lucratividade de projetos.. Isso aí é com a galera do financeiro.. As vezes ajudo, as vezes não.. </p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:18</span> >> Inclusive o financeiro da Taller tem derivado umas informações bem interessantes do que fazemos na operação.. </p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:19</span> >> Só lembrem que não é preciso esvaziar o lago para contar os peixes.. ;-) </p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:19</span> >> começa simples e vai adaptando.. </p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:20</span> >> Talvez perca as primeiras amostras, talvez não.. Só não vale ficar na inércia.. =) </p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 21:21</span> >> A demanda é por "feature"?</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 21:21</span> >> Ou tipo: desenvolver X</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 21:23</span> >> Pra mim o risco eh confundir isso aí é achar que está tendo lucro...</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 21:23</span> >> O cliente paga X por hora, estamos com CMD mega poderoso,  ou seja: lucro!!</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 21:24</span> >> Só esquece que o custo operacional além do salário está matando a lucratividade do projeto</p>
+<p class="messages"><span class="username">rafaelcaceres</span><span class="time"> 21:24</span> >> pra galera de dev o CMD acaba sendo só um valor comparativo mesmo</p>
+<p class="messages"><span class="username">rafaelcaceres</span><span class="time"> 21:24</span> >> nunca vi ninguem, pelo menos de dev, tentando bater isso com lucratividade</p>
+<p class="messages"><span class="username">rafaelcaceres</span><span class="time"> 21:28</span> >> eu acho o legal do CMD é que TH sozinho não diz muito… posso contratar 10 pessoas e meu TH vai subir… mas subir de 10 pra 15 nao quer dizer mto.. já o CMD vai me dar um valor mais realista.. se eu contratar 10 pessoas, eventualmente meu CMD vai ter que voltar a ser o antigo, no minimo…</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:28</span> >> VH ainda não vi isso acontecer, depois de um ano de vida do CMD.. Mas tem que ficar atento mesmo </p>
+<p class="messages"><span class="username">rafaelcaceres</span><span class="time"> 21:28</span> >> ai da pra ver o custo de brooks</p>
+<p class="messages"><span class="username">rafaelcaceres</span><span class="time"> 21:28</span> >> mas claro, tudo relativo</p>
+<p class="messages"><span class="username">rafaelcaceres</span><span class="time"> 21:29</span> >> se entraram pessoas novas na equipe é normal que o CMD aumente no começo</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:29</span> >> Perfeição é a palavra para as suas intervenções Rafa.. =) </p>
+<p class="messages"><span class="username">rafaelcaceres</span><span class="time"> 21:30</span> >> haha, valeu :smile:</p>
+<p class="messages"><span class="username">rafaelcaceres</span><span class="time"> 21:31</span> >> as melhores métricas vem em pares!!!</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:31</span> >> <span class="cite">@rafajagua</span> pode trabalhar as variações que você quiser.. Se quiser olhar para o CMD no nível de módulos, épicos, demandas, historias, tasks, o poder é todo seu.. </p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:31</span> >> Só lembre de duas coisas importantes: não misture os níveis e se lembre que excesso de informação é tóxico </p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:32</span> >> Na real, informação é tóxica.. ;-) </p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:32</span> >> Durmam com um barulho destes =) </p>
+<p class="messages"><span class="username">celso</span><span class="time"> 21:32</span> >> Cheguei em casa e family time.. Depois entro para ver o que disseram</p>
+<p class="messages"><span class="username">driker</span><span class="time"> 21:54</span> >> Galera, uma dúvida... Não sei se já foi feito anteriormente... Na opinião de vcs, em quais pontos o kanban deixa a desejar?</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 23:09</span> >> <span class="cite">@driker</span> Ambientes de alta inovação e grande variabilidade, o Kanban quebra, e sem alternativa até o momento, ouvi rumores que o Snowden e o David estavam trabalhando em algo como uma "Greening Strategy", manter um sistema sempre no complexo, te juro que não tenho bagagem intelectual mínima para sequer rabiscar o que seria isso.</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 23:28</span> >> <span class="cite">@rodrigoy</span> o que você está chamando de “quebra” neste caso? Já escreveu sobre ou tem alguma referência para eu dar uma lida?</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 23:30</span> >> alta % de demandas canceladas e precisando deixar ou voltar no fluxo?</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 23:36</span> >> talvez aí entre o VCC e um trabalho forte na elaboração e maturação de hipóteses...</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 23:37</span> >> vou levar para o canal do #value_proposition</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 09:09</span> >> <span class="cite">@celso</span> ambientes assim rola proto-kanban, só visualização e postits. Alta experimentação significa workflow instável, WIP variável...</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 09:24</span> >> O modelo que o Google apresenta no livro "Sprint" pode ser uma alternativa... Estou com ele aqui pra dar estudada.
+A princípio o tal "Sprint" eh de corrida mesmo, alta inovação, rápida prototipacao e teste no mundo real... </p>
+<p class="messages"><span class="username">victor</span><span class="time"> 09:27</span> >> <a href="https://www.amazon.com/Sprint-Solve-Problems-Test-Ideas/dp/150112174X">https://www.amazon.com/Sprint-Solve-Problems-Test-Ideas/dp/150112174X</a></p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 09:38</span> >> Slide deck aqui: <a href="https://developers.google.com/design-sprint/downloads/DesignSprintMethods.pdf">https://developers.google.com/design-sprint/downloads/DesignSprintMethods.pdf</a></p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 09:40</span> >> parece o double diamond de DT comprimido em uma semana</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 10:02</span> >> sim</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 10:45</span> >> As pessoas sempre vão tentar criar algo que meta restrições onde não deveriam ter restrições. Design Thinking é uma delas. #complicatedDomain #nonakaDive</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 10:46</span> >> Usa Lego Serious Play...</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:54</span> >> <span class="cite">@victor</span> voltando a falar do CDM</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:54</span> >> Se colocar o custo inteiro da empresa vai perder uma coisa do CMD que eu acho importante</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:55</span> >> o CMD mostra a relação do time com entrega. Variação de pessoas (e salários) vs Throughput</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:55</span> >> e o problema que eu vejo é adicionar um custo fixo invariável</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:56</span> >> que, mesmo com redução da equipe pela metade, vai segurar o CMD lá em cima (não tão lá em cima, mas dá pra entender)</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:56</span> >> e aí vc perder essa noção de custo direto da demanda.</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:57</span> >> Na crafters isso é irrisório, porque não temos escritório e temos baixo custo fixo.</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:57</span> >> mas na lambda por exemplo, imagino que o custo fixo seja alto.</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 12:18</span> >> Custo fixo eh baseado na posição... Um time que reduz de tamanho tem participavao do custo fixo menor... </p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:50</span> >> então vc faz um rateio do custo fixo por time?</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:50</span> >> faz como? por cabeça ou por faturamento?</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:27</span> >> rateio é a relação de custo fixo + variáveis + depreciação (sem impostos se sao aplicados depois)</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:27</span> >> e ele varia por time (numero de pessoas e talz)</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:27</span> >> claro, nessa visão, escala passa ser um pouco mais importante, mas ajuda a manter o que chamamos aqui de ticket médio</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:28</span> >> entendi</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:28</span> >> nesse caso vai funcionar</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:28</span> >> que é: qual o mínimo que podemos vender nossa hora para se manter no mercado</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:28</span> >> humm</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:28</span> >> sobre essa última frase</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:28</span> >> :stuck_out_tongue:</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:28</span> >> :stuck_out_tongue:</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:29</span> >> deve funcionar em muitos casos</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:29</span> >> MAS</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:29</span> >> imagine que vc tem 3 times, dois produzindo de fato</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:29</span> >> e os outros dois não produzindo</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:29</span> >> ou fazendo R&amp;D</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:29</span> >> ok</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:29</span> >> vc tem que jogar todo o custo fixo na conta de `quanto vamos cobrar pelo time 1`</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:30</span> >> pq o time 1 é o único que gera receita de fato</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:30</span> >> nao neh</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:30</span> >> ele tem que pagar os outros dois</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:30</span> >> mais ou menos</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:30</span> >> claro que isso tem a ver com a sazonalidade e tal</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:30</span> >> tem a ver com dinhieiro de investimento</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:31</span> >> tbm</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:31</span> >> se for um projeto sim</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:31</span> >> mas e qdo é constante?</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:31</span> >> se quem banca esse investimento é projeto ou banco ou investidor</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:31</span> >> sim</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:32</span> >> se for o projeto do time1 o outro time é custo fixo</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:32</span> >> e se for constante tbm</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:32</span> >> se for um fluxo de caixa separado, devido a investidores ou banco, blz</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:32</span> >> mas aí o custo fixo da empresa vai ser bancado pelo investimento?</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:32</span> >> ex:</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:33</span> >> custo fixo: 30k</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:33</span> >> 3 times de 5 pessoas</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:33</span> >> 10k pra cada time por mês</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:33</span> >> 1 time é só projeto interno e R&amp;D</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:33</span> >> os outros dois faturam</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:33</span> >> o time de R&amp;D vai bancar custo da empresa?</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:33</span> >> com o dinheiro de investidor?</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:52</span> >> calma… custo de pessoal (time) não é custo fixo</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:52</span> >> Investimento: sim, também pode bancar custo fixo da empresa - é assim que empresa que recebe investimento usa o dinheiro</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:53</span> >> voce esta misturando. Vamos lá:</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:53</span> >> Fluxo de caixa nao tem a ver com a gestão do custo de investimento...</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:54</span> >> Como vc faria nesse caso:</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:55</span> >> Entra dinheiro de investimento (que pode ser lucro reinvestido, banco, tio rico ou tubarao).</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:55</span> >> Esse dinheiro pode ser alocado num centro de custo diferente, que é responsável por incorporar os custos de P&amp;D</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:56</span> >> P&amp;D tem: custos de pessoal, custos de posição, custos de assets… a porra toda entra na jogada</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:56</span> >> Se vc tem um time que fatura cliente, e que gera lucro, o lucro desse projeto pode ser reinvestido em P&amp;D. Por exemplo o outro time</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 13:58</span> >> por isso que nesse ponto escala é importante, pra diluir o custo</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 14:00</span> >> mas aluguel, funcionarios administrativos genéricos aos times, custos com software, manutenção predial, etc.</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 14:01</span> >> coisas que muitas vezes não são necessárias para o projeto de R&amp;D</p>
+<p class="messages"><span class="username">dalfenas</span><span class="time"> 14:01</span> >> A conversa tá boa mas o assunto já foi longe do kanban :smile:</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 14:01</span> >> tudo isso é rateado até pro R&amp;D?</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 14:02</span> >> <span class="cite">@dalfenas</span> quando eu lancei o CMD, o tuite do Yoshi foi o seguinte: Mais uma métrica emergindo da comunidade Kanban.. Kanban e Don Reinertsen tem tudo a ver..</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 14:02</span> >> então na real, quem vai longe é o Kanban =P</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 14:02</span> >> Tudo isso aí no contexto de Kanban. pronto, agora tá de volta no assunto. hauahuaha</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 14:04</span> >> a prova: <a href="https://twitter.com/rodrigoy/status/656176067519082496">https://twitter.com/rodrigoy/status/656176067519082496</a></p>
+<p class="messages"><span class="username">victor</span><span class="time"> 15:42</span> >> Vc monta um time pra construir alguma coisa inovadora (seja lá o que isso que dizer), tipo P&amp;D, e está dizendo que seu custo com aquisição de software, admistrativo, fixo, café não entra? Pra mim isso tudo vai dentro de uma análise relacionada ao custo de entrega de uma demanda</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:57</span> >> to dizendo que pra P&amp;D esse custo fixo pode ser demais e matar o projeto.</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:57</span> >> Claro que se tiver grana sobrando, blz</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:58</span> >> mas eu separaria isso. Imagina um investidor vendo a grana dele de um produto específico sendo comido por um custo fixo de uma empresa que investe em 10 produtos diferentes.</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:59</span> >> mas é certo que cada contexto é um contexto diferente. Acho que vale levantar todos esses pontos a se considerar na hora de fazer um CMD</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:59</span> >> e por essas e outras que eu não acho legal calcular preço em cima do CMD</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:59</span> >> mas com alguns ajustes e num contexto específico, dá certo sim</p>
+<p class="messages"><span class="username">dalfenas</span><span class="time"> 16:42</span> >> <span class="cite">@celso</span>  e demais: eu estava acompanhando, e queria dizer que tanto a discussão quanto o texto não estavam bons: estavam excelentes. Já consegui abrir excelentes discussões durante o dia na empresa e plantar a ideia por aqui. Valeu!</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 16:47</span> >> <span class="cite">@felipero</span> concordo. As contas devem estar separadas… imagino numa tentativa de expandir o numero de possiveis investimentos em P&amp;D vc precisaria ratear o custo fixo…
+Se um investidor coloca dinheiro na sua startup (futuro unicornio), vc vai colocar em todo o custo operacional dentro do escopo do investimento. Se vc tiver varios investidores diferentes para varios projetos diferentes, dai fica bem complexo dividir - mas totalmente viável...</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 16:48</span> >> isso</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 16:48</span> >> exatamente</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 16:48</span> >> por isso considerar o CMD com custo fixo</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 16:48</span> >> agora vale dizer que, se eu sou o investidor de boto dinheiro e os caras usam pra comprar puff colorido, eu chuto a cara de todo mundo</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 16:48</span> >> ou melhor… com todo o espectro de custo que vc tem</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 16:48</span> >> ahuahauhauha</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 16:49</span> >> boto fé…</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 16:49</span> >> Mas eu já estive numa startup que passou por 3 rodadas de investimento, que o dinheiro gasto também foi pra comprar cadeiras e aluguel da equipe (e maquina de expresso e puf)</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 16:50</span> >> acredito que depende do escopo… e claro, da musculação financeira que a equipe faz</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 16:50</span> >> ahh, nos rounds posteriores até rola</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 16:50</span> >> e de quanto dinheiro entra :smile:</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 16:50</span> >> mas a ideia é essa...</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 16:50</span> >> agora tenho que botar um código Go sinistrão em produção aqui e tá foda</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 16:51</span> >> daqui a pouco o <span class="cite">@celso</span> me dá um esporro</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 16:51</span> >> hauahuaha</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 16:51</span> >> kkkk vai tomar esporro merrrrmo...</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 16:51</span> >> to instalando sa porra aqui no mac..</p>
+    </body>
+    </html>
