@@ -1,0 +1,91 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>scrum.20160926</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>scrum .:. 26/09/2016</h1>
+        <p class="messages"><span class="username">chiovetto</span><span class="time"> 09:14</span> >> <span class="cite">@khaueviana</span>: sempre trabalhei desta forma: o grooming (detalhamento dos itens de backlog) do sprint seguinte é realizado durante o sprint atual. Mas quem faz isso? O SM com o PO. Os dois atuam de forma a deixar os itens o mais detalhado possível para que o time possa estimar e criar o "definition of ready" no sprint seguinte. Ok, entendi. Mas como se faz para o sprint 1? Trabalhamos sempre com o sprint 0, onde o trabalho técnico é comandado pelo Arquiteto na criação da estrutura base do software em questão com o apoio do time, assim todo o time terá conhecimento da arquitetura base e como deve ser implementado as funcionalidades, e o SM e PO atuam no grooming do sprint 1. Espero ter ajudado. Abs.</p>
+<p class="messages"><span class="username">lfabris</span><span class="time"> 09:18</span> >> <span class="cite">@khaueviana</span> , trabalho igual ao <span class="cite">@chiovetto</span> comentou....sendo o Sprint 0 um sprint de setup, de uma a duas semana no máximo, ele é o único sprint que pode ter um tempo diferente dos demais, no sprint 0 é realizada a escolha do framework, criação de ambientes, integração entre o time, definições dos critérios de aceite, definição de feito etc...</p>
+<p class="messages"><span class="username">chiovetto</span><span class="time"> 09:19</span> >> Perfeito <span class="cite">@lfabris</span>!</p>
+<p class="messages"><span class="username">khaueviana</span><span class="time"> 09:27</span> >> Muito bom <span class="cite">@chiovetto</span> e <span class="cite">@lfabris</span>, eu cheguei nesses conceitos em algumas literaturas, mas com a explicação de vocês ficou mais claro pra mim. Obrigado :slightly_smiling_face:</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 10:02</span> >> A ideia foi perfeita e faz sentido, o único problema é chamar de Sprint 0.
+
+Sprint preconiza entrega de um incremento de produto. Vocês relataram muito mais uma preparação do product backlog do que a confecção de um incremento de produto.
+
+As nomenclaturas que fazem mais sentido são:
+Inception : quando se pensa mais do ponto de vista da concepção dos itens do product backlog
+
+Setup : preparar infraestrutura, ambiente de desenvolvimento, setup do processo, conversa do time, treinamentos, e tudo mais q for necessario para iniciar a primeira Sprint.
+
+Pré - game : quando vc pensa que vai ter esse esforço de setup no início e no fim do projeto
+
+Mas de qualquer maneira esse período que antecede o início das entregas deve ser o mais curto possível</p>
+<p class="messages"><span class="username">gustavo_tronco</span><span class="time"> 10:04</span> >> Costumamos fazer duas semanas de inception (voltada para escopo funcional) e setup (preparar infra, treinar o time nas tecnologias do projeto, montar pocs).. em projetos que precisamos encurtar este tempo, geralmente perdemos em produtividade nos primeiros sprints e aumenta o risco de refactoring</p>
+<p class="messages"><span class="username">chiovetto</span><span class="time"> 10:39</span> >> concordo <span class="cite">@andersonhummel</span> , acho que faz mais sentido mesmo.</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 11:00</span> >> sprint 0 é um termo muito usado na comunidade, eu não tenho problema de chamar assim</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 11:00</span> >> (eu entendo sua posição)</p>
+<p class="messages"><span class="username">geraldobf</span><span class="time"> 11:04</span> >> Por mais que tenhamos um Sprint de inception como mencionou o <span class="cite">@gustavo_tronco</span> o ideal é que saíamos dele com um incremento de software potencialmente utilizável, por mais atômico que seja.</p>
+<p class="messages"><span class="username">geraldobf</span><span class="time"> 11:04</span> >> E pra quem for fazer a certificação da <a href="http://Scrum.org">Scrum.org</a>, não mencione Sprint 0 de maneira alguma...</p>
+<p class="messages"><span class="username">miguel.santos</span><span class="time"> 11:15</span> >> sobre o grooming que o <span class="cite">@chiovetto</span> mencionou, trabalho de forma parecida também. mas tentamos também ter pelo menos um dev na sessão de grooming para considerarmos uma visão mais técnica com antecedência ao planning também. quanto aos itens a serem discutidos, buscamos fazer grooming não apenas do próximo sprint, mas os próximos dentro da proxima release, pois nos ajuda reforçar e recomunicar a visão do release goal  e a perceber se precisaremos ajustar o escopo com base em possíveis novas estimativas.</p>
+<p class="messages"><span class="username">chiovetto</span><span class="time"> 11:19</span> >> Legal <span class="cite">@miguel.santos</span>, excelente contribuição. :+1:</p>
+<p class="messages"><span class="username">ruckert</span><span class="time"> 13:09</span> >> Só para alimentar as possibilidades do grooming, testei com minha equipe a seguinte abordagem:
+a) imprimi as histórias em folhas a4
+b) levei e galera pra mesma sala e disse para parearem
+c) tinham dois computadores disponíveis para consultar o estado atual do produto
+d) não precisavam manter os pares, só pedi para que não ficassem sozinhos
+e) distribui algumas folhas e deixei outras no centro da mesa
+f) a instrução era quebrar as histórias em tarefas, escrever questionamentos, dúvidas, discutir soluções e escrevê-las nas folhas. Se necessário poderiam criar mais histórias, reescrever, etc.
+g) essas informações serão levadas pro planning para agilizar o processo
+
+Funcionou bem. Foi um total de 23 histórias "mastigadas" em cerca de 1h40. A galera interagiu bem, não se fechando nas duplas. Inclusive histórias mais polêmicas foram abertas pra todos e discutidas mais amplamente.</p>
+<p class="messages"><span class="username">miguel.santos</span><span class="time"> 14:08</span> >> <span class="cite">@ruckert</span> gostei da abordagem! algumas dúvidas: com que periodicidade vcs fazem grooming? qual o tamanho do time? qual a duração do sprint planning? o PO participa do grooming (local ou remotamente)?</p>
+<p class="messages"><span class="username">ruckert</span><span class="time"> 14:14</span> >> valeu <span class="cite">@miguel.santos</span>. Estou tentando gerar a aderência do P.O. ao grooming toda sprint. Explico: até 2 meses atrás eramos 5, o planning por si só era suficiente (sprint de 2 semanas, planning de 4h). Com o crescimento do time para 9 pessoas (contando comigo), os plannings não tem sido suficientes. Mesmo assim tem sido ruim convencê-lo a ficar pronto uma semana antes.
+Cheguei a realizar um grooming estilo planning, com todos juntos, história por história. Não foi muito eficiente: P.O. tem o perfil trabalhoso e ficou massante.
+Essa sprint fiz sem ele e com as regras acima e ficou bem melhor.</p>
+    </body>
+    </html>
