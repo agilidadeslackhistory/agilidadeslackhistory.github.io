@@ -1,0 +1,150 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>kanban.20160928</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>kanban .:. 28/09/2016</h1>
+        <p class="messages"><span class="username">rapha_albino</span><span class="time"> 08:42</span> >> Bom dia galera :sunny: 
+
+Nessa semana publicamos alguns insights sobre limitação de WIP e eficiência de fluxo no blog da Ptec - <a href="http://bit.ly/2d45x5R">http://bit.ly/2d45x5R</a>
+
+Aproveitando o gancho, gostaria de saber:
+1. Alguém tem alguma experiência de limitação de WIP? Quais foram os prós e contras?
+2. Para aqueles que medem a eficiência do fluxo das demandas, qual tem sido o uso dessa informação com o time e os stakeholders?
+
+Sei que o <span class="cite">@rodrigoy</span> tem algumas opiniões sobre o assunto e também li algumas coisas do <span class="cite">@celso</span> e <span class="cite">@alissonvale</span>.
+
+Quando tiverem um tempo, agradeço as observações.
+
+Valeu o/</p>
+<p class="messages"><span class="username">alissonvale</span><span class="time"> 09:16</span> >> <span class="cite">@rapha_albino</span> Muito bom o post! Parabéns!</p>
+<p class="messages"><span class="username">alissonvale</span><span class="time"> 09:24</span> >> <span class="cite">@rapha_albino</span> Eu acho que a diferença entre Scrum e Kanban com relação a limitar WIP vale um novo artigo. Acho que as motivações são diferentes para as duas abordagens e os efeitos também.</p>
+<p class="messages"><span class="username">rapha_albino</span><span class="time"> 09:44</span> >> Masssa <span class="cite">@alissonvale</span>  :wink:</p>
+<p class="messages"><span class="username">rapha_albino</span><span class="time"> 09:47</span> >> O que você enxerga como motivação e efeito na limitação de WIP no SCRUM? <span class="cite">@alissonvale</span>
+Ps: Aqui na Ptec, somos fãs do Software Zen :slightly_smiling_face: O <span class="cite">@wesleytz</span> tem feito uma palestra que tem uma forte influência no seu trabalho.</p>
+<p class="messages"><span class="username">alissonvale</span><span class="time"> 10:58</span> >> Obrigado <span class="cite">@rapha_albino</span> e <span class="cite">@wesleytz</span> ! A Ptec vai ser sempre bem-vinda aqui no Software Zen. Espero um dia ir aí conhecer o trabalho de vocês :slightly_smiling_face:</p>
+<p class="messages"><span class="username">alissonvale</span><span class="time"> 10:58</span> >> Com relação a sua pergunta….</p>
+<p class="messages"><span class="username">alissonvale</span><span class="time"> 10:58</span> >> No artigo, você diz: "We discussed that Scrum limits WIP when it uses the time-box approach. You only put in the system what will be consumed in your sprint. The difference is that in Kanban we can choose the number of items in the “Input” column according to the necessity of the team at that moment." 
+Está correto. A motivação para o Scrum fazer isso é a de criar uma espécie de safety-box para o time perseguir uma pequena meta (a meta da sprint) dentro de uma meta maior (a meta do projeto). Assim, o WIP do Scrum abre a uma dada frequência de tempo para que essa caixa seja esvaziada (com o review) e depois preenchida novamente (com um novo planning). O mérito disso é que você quebra um grande objetivo em objetivos menores. A cada pequeno objetivo atingido você aumenta o nível de confiança do sistema e também consegue dirigir o projeto para a direção certa. 
+Mas essa abordagem também tem alguns problemas que se amplificam de acordo com o nível de imaturidade dos times ou dos aspectos culturais do sistema nos quais eles estão inseridos. Como essa caixa é fixa, mas o que vai ser colocado nela é de tamanho incerto - pode se expandir ou se contrair dependendo do caso -, time e cliente tem que dominar essa habilidade de colocar as coisas ali dentro de forma que não se deperdice espaço ou que não vaze coisas no final. O cliente tem medo de colocar menos coisas na caixa e sobrar. A equipe tem medo de colocar mais e ficar pressionada pra dar um jeito de fazer caber depois pra não falhar com a meta. O resultado é um tremendo esforço pra coordenar isso com práticas self-serving, aquelas que só são necessárias pra satisfazer o próprio método, nesse caso fazer o trabalho caber perfeitamente dentro da caixa (story points, planning poker, etc). Um outro problema é que nem sempre a caixa mapeia bonitinho com uma meta real, e aí a meta passa ser entregar o escopo, o que nos leva de volta a gestão baseada em eficiência de recurso.
+E aí vem aquelas dúvidas mais comuns em praticantes do Scrum: o que faço caso não consiga fazer tudo? E se o cliente quiser mudar no meio? Cancelo a sprint? O que faço com o trabalho iniciado, mas não concluído na sprint seguinte? Todas perguntas relacionadas com o desafio de fazer a coisa caber na caixa. Emfim, em muitos casos, ficamos tanto tempo tentando fazer a coisa caber na caixa, que esquecemos que no final o que importa mesmo é fazer as coisas. É tudo apenas custo de coordenação porque o propósito do time deixou de ser entregar e passou a ser "being in compliance com o Scrum". 
+
+Desenvolvimento iterativo não requer fixed-timebox, como muito pensam. Isso é um mito. A gestão do WIP do Scrum não tem a ver com a gestão de fluxo, mas com a gestão dos pontos de sincronização dessas pequenas metas que citei. Isso não é uma crítica ao Scrum, apenas um análise objetiva na motivação e nos efeitos do modelo. Há vários contextos e situações em que esse modelo do Scrum é mais indicado do que o do Kanban, e vice-versa. Por exemplo, quando há desenvolvimento sem handoffs. Assim como há vários contextos que limitar wip não faz nenhum sentido. Essa é uma das razões que prefiro tratar os métodos como ferramentas. Assim ganho em eficácia, pois o foco passa a ser o encaixe da melhor solução para o problema que tenho nas mãos.</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 11:06</span> >> ótima análise <span class="cite">@alissonvale</span></p>
+<p class="messages"><span class="username">brenobcampos</span><span class="time"> 11:11</span> >> <span class="cite">@alissonvale</span> perfeito :slightly_smiling_face:
+nessa ideia de “being in compliance com o Scrum”, as pessoas acabam esquecendo do objetivo da Sprint, e tendo como visualização de sucesso falha simplesmente a entrega/não entrega de determinado número de US, sem se importar se aquilo atendia a um objetivo/resolvia uma dor.</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 11:17</span> >> parabéns <span class="cite">@rapha_albino</span> muito bacana mesmo o post</p>
+<p class="messages"><span class="username">rapha_albino</span><span class="time"> 11:20</span> >> <span class="cite">@rafajagua</span> <span class="cite">@alissonvale</span> créditos para o nosso <span class="cite">@lucascolucci</span> :wink:</p>
+<p class="messages"><span class="username">rapha_albino</span><span class="time"> 11:24</span> >> muito esclarecedor o feedback <span class="cite">@alissonvale</span> :wink:</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 11:40</span> >> Estou com uma duvida pessoal, a principio quais vantagens eu teria em adotar um quadro para manutenção do sistema e um quadro separado para desenvolvimento de novos recursos e melhorias?</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:42</span> >> dois quadros pra mesma equipe <span class="cite">@matheusmarzocchi</span> ?</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 11:42</span> >> isso, quem cria os bugs é quem faz o fix</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 11:43</span> >> <span class="cite">@rapha_albino</span> já abri aqui e vou ler assim que eu entregar algumas demandas :wink:</p>
+<p class="messages"><span class="username">celso</span><span class="time"> 11:44</span> >> valeu pela referência..</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:44</span> >> <span class="cite">@matheusmarzocchi</span> Não é uma boa ideia ter dois quadros</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:45</span> >> o time não vai saber qual é mais prioritário pra ele puxar</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:45</span> >> acho que uma área em destaque no mesmo quadro seria melhor</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:45</span> >> ou trata as cores dos cartões no mesmo fluxo</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 11:46</span> >> atualmente destacamos por etiquetas nos cards mesmo, só que surgiu a duvida durante a leitura do CFD</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:47</span> >> o ideal é manter no mesmo quadro</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:47</span> >> e talvez fazer um CFD separado</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:47</span> >> isso pq tem bug que é menos prioritário que features</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:48</span> >> e aí fica difícil dizer qual vem antes de qual em espaços separados</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 11:48</span> >> <span class="cite">@matheusmarzocchi</span> <span class="cite">@felipero</span> , nesse cenário eu já utilizei mesmo quadro, porém uma linha na horizontal apenas, acima eram bugs, mas o time também, apesar de todos juntos, alguns eram os 'selecionados' para tratar os bugs naquela entrega...</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 11:49</span> >> e aí os bugs por si só, apesar de mesmo quadro, tinham sua priorização...</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 11:49</span> >> então, inicialmente temos o bug em testes e o em produção, ambos são identificados por etiquetas diferentes no nosso quadro kanban, foi sugerido um board separado e um dev pra priorizar a demanda desse outro board, mas eu ainda não consigo ver muita vantagem se o objetivo é uma leitura mais clara do CFD</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:49</span> >> <span class="cite">@victor.franzonatto</span> MAs como vcs sabiam o que fazer primeiro? Bugs ou features?</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 11:51</span> >> então, apesar de mesmo projeto e mesmo timebox, os bugs tinham sua priorização separada... e no time, naquela entrega, definíamos quem iria atacar os bugs... então na prática, atuavam como quadros separados...</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:52</span> >> hum... dedicava alguém pros bugs</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 11:52</span> >> <span class="cite">@victor.franzonatto</span> esse board era físico ou digital?</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:52</span> >> entendi</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 11:52</span> >> <span class="cite">@matheusmarzocchi</span>, era digital</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 11:52</span> >> qual ferramenta utilizaram? pois no trello tenho algumas limitações na forma de organizar</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 11:53</span> >> <span class="cite">@felipero</span> , na verdade, definíamos 'alguéns', decidido entre o time</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:53</span> >> @tools rolaram uns posts sobre ferramentas agora</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 11:54</span> >> <span class="cite">@matheusmarzocchi</span> naquela época o kabanize era totalmente free, utilizávamos ele..</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:54</span> >> tem uma lá que tem CFD separado por listas de cartões</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:54</span> >> mesmo que estejam no mesmo board</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 11:54</span> >> é o que vc compartilhou?</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 11:54</span> >> vou ver.</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:55</span> >> ahh é... vc tava lá</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 11:55</span> >> eu ia falar do que vc compartilhou tbm</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 11:57</span> >> <span class="cite">@matheusmarzocchi</span> o que fazíamos era adicionar uma 'swimlane' no kanbanize... <a href="https://kanbanize.com/blog/edit-board-workflow/">https://kanbanize.com/blog/edit-board-workflow/</a></p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 11:59</span> >> @tools manda bala, parece boa</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 11:59</span> >> opa, nóis</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 13:02</span> >> CDF mapeia o sistema não separação da capacidade interna dele... <span class="cite">@felipero</span> <span class="cite">@matheusmarzocchi</span> <span class="cite">@victor.franzonatto</span></p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:03</span> >> <span class="cite">@rodrigoy</span> E se quiser ver a evolução de demandas de um determinado tipo? Qtos bugs estamos criando vs quantos estamos eliminando</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 13:05</span> >> Perae...</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:05</span> >> pero</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 13:16</span> >> <a href="https://www.infoq.com/br/presentations/kanban-tdd-melhoria">https://www.infoq.com/br/presentations/kanban-tdd-melhoria</a></p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 13:17</span> >> Vai no minuto 29:00... É parecido com com o CFD, mas não rastreia WIP e sim a vazão acumulada...</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:18</span> >> to assistindo</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 13:22</span> >> assistindo II</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 13:22</span> >> Isso faz parte do Failure Demand Improvement Model que criei em 2012 e apresentei no Lean-Kanban North America 2013 em Chicago...
+
+<a href="http://www.slideshare.net/rodrigoy/fighting-the-cost-monster">http://www.slideshare.net/rodrigoy/fighting-the-cost-monster</a></p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:23</span> >> legal essa ideia aí</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:24</span> >> mas acho que isso aí é pra analisar qtos bugs temos gerado</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:24</span> >> mas dá pra extraír daí tbm quantos bugs temos eliminado?</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:25</span> >> mas aí tbm, acho que nem o CFD vai dar isso</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 13:26</span> >> O modelo é focado na divisão do throughtput em valor x falha. Daria até pra usar o CMD e saber o custo dos bugs financeiramente...</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:26</span> >> sim</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:26</span> >> acho que é um mix de métricas</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 13:26</span> >> Cara, o que interessa mesmo é o vetor, é aonde o sistema está indo... Se a tendência é aumentar valor e diminuir demanda de falha ou o contrário...</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:27</span> >> já estou articulando pra colocar algo assim no conflux</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:27</span> >> :stuck_out_tongue:</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 13:27</span> >> AUSHUAHSUAHSUAH</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 13:27</span> >> chique</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 13:31</span> >> Na minha experiência você precisa ter um argumento quantitativo para engajar emocionalmente devs a melhorar as práticas técnicas. Esse modelo tem funcionado. As vezes só de você botar esse gráfico mostrando a tendência já gera desconforto suficiente. A primeira prática "No Judgement" evita as pessoas gamear a métrica.  A visão alternativa (do Agile como exemplo) é ridicularizar o desenvolvedor que usa práticas ruins, como dizer que não são profissionais, são burros, bundões, não ágeis e etc... mas, lembremos que o Agile é people-oriented...</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 13:33</span> >> eu boto fé em usar a linha de tendência sim</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 13:34</span> >> "... A visão alternativa (do Agile como exemplo) é ridicularizar o desenvolvedor..."</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 13:35</span> >> e eu que sou da turma do standup comedy</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 13:37</span> >> Fiquei meio perdido nas informações, vamos supor que meu objetivo é exatamente aumentar valor e diminuir demanda de falha, a segmentação se vê necessária? necessária para que as métricas possam ser estabelecidas e possibilite a criação de um modelo para a avaliação das melhorias?</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 17:40</span> >> <span class="cite">@matheusmarzocchi</span> Criar tipos de item de trabalho de trabalho eu acho primordial. Bugs e novas demandas não tem a mesma natureza. Agora se você vai reservar capacidade, modelar workflows diferentes, atribuir Fitness for Purpose Criterias diferentes para cada um desses tipos, aí a decisão é sua. Meu modelo é focado em quem quer reduzir demanda de falha.</p>
+    </body>
+    </html>
