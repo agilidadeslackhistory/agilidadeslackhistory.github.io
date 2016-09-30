@@ -1,0 +1,83 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>kanban.20160929</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>kanban .:. 29/09/2016</h1>
+        <p class="messages"><span class="username">gutomcosta</span><span class="time"> 23:07</span> >> <span class="cite">@rodrigoy</span> Olhando seus slides fiquei com uma dúvida aqui. Como vc classifica o que é Valor e Improvement? Acho que são coisas subjetivas, mas fico pensando se daria para assumir uma simplificação como: Novas funcionalidades = “Valor”, Melhorias=“Improvements” e Bugs=“Demanda de falha”. Esse caminho faz sentido?</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 23:37</span> >> Sim</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 23:38</span> >> Improvement são demandas que você cria para tentar matar a demanda de falha...</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 23:38</span> >> Nem sempre improvement é perceptível pelo cliente diretamente.</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 17:42</span> >> Essa questão de Improvments e Feature é uma coisa complicada de separar, porque Melhoria pode ser considerada uma feature também, você está gerando valor pro cliente.
+Meu ponto de vista, não precisaria segmentar isso, poderia tratar tudo como feature.
+
+Acho que vale expor alguns exemplos ai de improvment e confrontar se ela pode ou não ser uma feature.</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 18:25</span> >> <span class="cite">@ferrari</span> Exemplos de Improvements que estou vendo nesse meu cliente atual:
+
+- Rodar os testes em paralelos
+- Estudar o framework XXX para resolver o YYYY
+- Automatizar os testes do módulo W
+- Melhorar a usabilidade na tela Z
+- Implantar um Build Server</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 18:26</span> >> isso aqui para nós é Eficiência</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 18:26</span> >> e nao improvment</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 18:26</span> >> normalmente nos absorvemos</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 18:26</span> >> - Rodar os testes em paralelos
+- Estudar o framework XXX para resolver o YYYY</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 18:26</span> >> - Implantar um Build Server</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 18:26</span> >> esses outros aqui nao</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 18:26</span> >> - Automatizar os testes do módulo W
+- Melhorar a usabilidade na tela Z</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 18:26</span> >> isso normalmente entra dentro de uma história</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 18:27</span> >> não ferro e fogo oq digo, mas dependendo do caso</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 18:28</span> >> até estudar está dentro de uma historia tambem</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 18:28</span> >> no caso feature</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 18:28</span> >> valeu os exemplos <span class="cite">@rodrigoy</span></p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 18:29</span> >> Tem uma "grey area" sim... mas, é diferente investir no produto e investir no processo...</p>
+    </body>
+    </html>
