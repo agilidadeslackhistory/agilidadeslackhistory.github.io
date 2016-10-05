@@ -1,0 +1,96 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>kanban.20161003</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>kanban .:. 03/10/2016</h1>
+        <p class="messages"><span class="username">motta</span><span class="time"> 22:42</span> >> Depende do tamanho dos itens, se forem pequenos vai causar um impacto menor nas metricas.. pelo que eu me lembre, por padrao o jira conta dias corridos, eu acho mais útil contabilizae lead time em dias úteis :grimacing:</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 01:53</span> >> Dias corridos, sempre... Se seu mecânico te entrega teu carro na sexta ou na segunda é diferente, né? Com o lead time não estamos medindo trabalho, esforço, estamos medindo tempo... e o tempo NÃO PARA...</p>
+<p class="messages"><span class="username">thayna</span><span class="time"> 10:29</span> >> Onde trabalho configuramos o jira para:
+1 dia = 8 horas
+1 semana = 5 dias </p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 11:24</span> >> lead time != work log... acho que isso tende a confundir mesmo...</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 11:45</span> >> Eu acho engraçado a origem dessa pergunta: lead time é dias corridos ou dias trabalhados. Me digam: Por que vocês querem medir Lead Time só por dias úteis?</p>
+<p class="messages"><span class="username">rodrigozambon</span><span class="time"> 11:52</span> >> Acho que essa pergunta não tem muito cabimento em se tratando de lead time.</p>
+<p class="messages"><span class="username">rodrigozambon</span><span class="time"> 11:53</span> >> Pelo que eu sempre vi são dias corridos.</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 11:54</span> >> Acho que toda pergunta tem cabimento, enfim mas talvez a questão seria entender primeiro o propósito de utilizar o lead time... pq realmente quem não conhece, apenas vê o campo no jira e pode ficar com esse entendimento de work log mesmo... faz parte...</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 11:54</span> >> Então <span class="cite">@rodrigozambon</span>, mas minha pergunta é: Por que as pessoas querem medir em dias úteis? Quais insights querem com isso e que mudança querem influênciar?</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 11:55</span> >> <span class="cite">@victor.franzonatto</span> Concordo... Muita gente delega sua educação aos conceitos das ferramentas. Pobres almas...</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 11:55</span> >> Até as ferramentas condicionam o usuário a isso...</p>
+<p class="messages"><span class="username">rodrigozambon</span><span class="time"> 11:56</span> >> <span class="cite">@rodrigoy</span> eu também queria saber!!</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 11:56</span> >> E acredito sim, fazer parte do escopo da ferramente é educar seu uso, mas a maioria é só vender...</p>
+<p class="messages"><span class="username">rodrigozambon</span><span class="time"> 11:59</span> >> Talvez para medir a eficiência do processo. Menos lead time, mais "eficiência". touch time / lead time</p>
+<p class="messages"><span class="username">rodrigozambon</span><span class="time"> 12:00</span> >> Não dia útil vai interromper o processo? Como fica isso no vsm?</p>
+<p class="messages"><span class="username">rodrigozambon</span><span class="time"> 12:00</span> >> Não dia útil não gera valor?</p>
+<p class="messages"><span class="username">thayna</span><span class="time"> 12:07</span> >> Aqui ainda não definimos os indicadores de eficiência, comentei sobre a nossa configuração do jira, pq hoje não podemos fazer hora extra e nem banco de horas. Então nossas sprints por exemplo são de 2 semanas = 80 horas 
+Início na segunda é término na sexta 
+Talvez expressei mal quando falei sobre a configuração do Campo </p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:19</span> >> <span class="cite">@thayna</span>: assim você não pode usar o lead time como métrica de negócios. Você perde o principal objetivo dele</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:21</span> >> <span class="cite">@rodrigoy</span>: e o touch time? Vamos supor que um cartão fique em uma coluna de touch de sexta pra domingo. Vc desconta o fds e conta esse tempo como queue ou conta tudo como touch?</p>
+<p class="messages"><span class="username">gutomcosta</span><span class="time"> 12:21</span> >> acho que a motivação da pergunta ocorreu pelo momento de transição que vivemos. A expectativa de um cliente é sempre entender quanto tempo demora para execução de uma demanda. Já fizemos um levantamento dos lead times dos últimos 3 meses, todos em dias corridos. O ponto é que o discurso ainda não está “alinhado”. O cliente ainda não entende muito a diferença para o modelo anterior (prazo e data), e é isso que estamos trabalhando no momento. Sempre pensei em lead time com dias corridos, mas as discussões  surgem, e as dúvidas tb. Por isso é sempre bom ouvir as opiniões daqui.</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 12:29</span> >> <span class="cite">@felipero</span> touch time é uma métrica custosa porque você precisa desse tipo de disciplina que você falou. Todas as vezes que usei EF foi para convencer alguém de limitar WIP. Depois jogo fora a métrica.</p>
+<p class="messages"><span class="username">rodrigoy</span><span class="time"> 12:31</span> >> Kanban é bastante data-driven, mas me afasto de "drenar o lago e contar os peixes". Quem fez meu treinamento sabe o que é isso.</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:36</span> >> Ok. Acho que no conflux dá pra facilitar isso. Por isso perguntei.</p>
+<p class="messages"><span class="username">rapha_albino</span><span class="time"> 13:22</span> >> <span class="cite">@felipero</span>  <span class="cite">@rodrigoy</span> o EF também tem sido útil quando preciso indícios de gargalos no sistema :slightly_smiling_face:</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 13:22</span> >> EF (?)</p>
+<p class="messages"><span class="username">rapha_albino</span><span class="time"> 13:23</span> >> <span class="cite">@matheusmarzocchi</span> Efficiency of flow</p>
+<p class="messages"><span class="username">rapha_albino</span><span class="time"> 13:23</span> >> (dias de touch time)/(dias do lead time da demanda)</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 13:23</span> >> obrg Sir! =D</p>
+<p class="messages"><span class="username">rapha_albino</span><span class="time"> 13:27</span> >> <span class="cite">@felipero</span> Estou sentido que o Conflux será uma daquelas ferramentas animais :slightly_smiling_face: Aproveitando, se vocês puderem compartilhar com a comunidade as definições das métricas, seria muito bacana :heart:. Tenho visto muito gente usando cycle time, lead time, etc. time.</p>
+<p class="messages"><span class="username">rapha_albino</span><span class="time"> 13:27</span> >> Para aqueles que tiverem interesse, tem um post muito bacana do Steven Thomas escreveu trazendo a diferença entre Cycle time e Lead time - <a href="http://itsadeliverything.com/lead-time-versus-cycle-time-untangling-the-confusion">http://itsadeliverything.com/lead-time-versus-cycle-time-untangling-the-confusion</a></p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 16:01</span> >> <span class="cite">@rapha_albino</span>: vamos fazer isso sim </p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 16:01</span> >> Quero manter uma comunidade em torno disso também </p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 16:02</span> >> Vc deve receber um email hoje ainda sobre o conflux </p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 16:36</span> >> <span class="cite">@gutomcosta</span> aqui são dias corridos na taller</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 16:36</span> >> e impacto não é grande não</p>
+<p class="messages"><span class="username">ferrari</span><span class="time"> 16:36</span> >> ja rodei isso em 2 projetos 1 de 2500h e outro de 2125h</p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 16:36</span> >> <span class="cite">@felipero</span> já me inscrevi porem ainda não recebi, mas estou no aguardo!</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 16:48</span> >> Vai receber tbm <span class="cite">@matheusmarzocchi</span> </p>
+<p class="messages"><span class="username">matheusmarzocchi</span><span class="time"> 16:48</span> >> muito obrg Sir!</p>
+    </body>
+    </html>

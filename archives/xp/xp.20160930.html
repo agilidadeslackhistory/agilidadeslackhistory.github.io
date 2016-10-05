@@ -1,0 +1,182 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>xp.20160930</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>xp .:. 30/09/2016</h1>
+        <p class="messages"><span class="username">dionatan</span><span class="time"> 10:48</span> >> Vamos levantar assuntos pra este canal?</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 10:49</span> >> Sugestões?</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 10:50</span> >> Uma questão que eu gosto de fazer... Qual a importância que tem as práticas de engenharia ágil de software? São mais ou menos importantes que as técnicas de gestão ágil?</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 10:50</span> >> @dionatan pinned a message to this channel.</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 11:40</span> >> Posso ser picareta e dizer depende?</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 11:42</span> >> Pra mim depende da organização e do software</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 11:43</span> >> Qual a atividade fim da organização: tecnologia? Software? Fazer pão?</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 11:44</span> >> O software, mata pessoas se der erro? ERP hospitalar, software embarcado de avião.... Ou é um tocador de música?</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 11:44</span> >> A Nasa lá fala que erro crítico é OU quando mata alguem OU quando gera impacto financeiro de 2 milhoes de dolares</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 11:44</span> >> Hot site vai sem TDD/Test First mesmo</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 11:45</span> >> :smile: </p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:04</span> >> Um hotsite é tão fácil de testar que não justifica ir sem TDD.</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:04</span> >> Imagine que é um hotsite que vai captar inscrições ou vendas</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:04</span> >> não testar isso é ter muita confiança</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:04</span> >> se for um hotsite estático, não precisa de código, aí sim, não precisa testar</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:04</span> >> pq não tem código de backend</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:04</span> >> só html e css</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:04</span> >> se tiver gracinha de JS talvez nem precise testar mesmo</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:05</span> >> mas se tiver 1 form lá, importante pra uma campanha, vai demorar 10min escrever testes pra isso.</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:05</span> >> bobagem não testar</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 12:06</span> >> Vai que vai. Sobe e bora ser feliz</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:07</span> >> hauhauah</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:07</span> >> eu to tão acostumado com TDD que não vejo sentido em não fazer</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:07</span> >> sai automaticamente.</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 12:07</span> >> acho que demoro mais sem testes do que com teste</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 13:20</span> >> E se um simples erro num hot site for suficiente pra fazer com que o potencial cliente perca a confiança e troque pelo concorrente?</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 13:23</span> >> É só fazer direito</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 13:23</span> >> :stuck_out_tongue: </p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 13:23</span> >> Brincadeira a parte</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 13:23</span> >> Cada demanda/desafio eu acredito que tem seu potencial de qualidade</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 13:24</span> >> Cláusula 20 do XGH: Testes é pros fracos.</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 13:24</span> >> Como o <span class="cite">@felipero</span> disse, pra ele é tão comum fazer teste, que demora mais não fazer</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 13:25</span> >> Cada profissional ciente da sua capacidade, confiança e desafio, junto ao seu time, pode chegar num entendido sobre a quantidade de cobertura, tipo de cobertura</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 13:25</span> >> A única coisa que digo é que sou a favor dessa conversa</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 13:27</span> >> Se uma Landing Page pra fazer  aquele gueri gueri maroto do seu produto e só tem um campo pra email, nada mais que isso. Devs macaco véio sabe fazer isso do jeito certo e com a cobertura ideal. O processo de design via TDD em teoria é mais curto, pois é algo mais corriqueiro, comum, com várias coisas pré preparadas. </p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 13:30</span> >> Lembrando que eu sou um péssimo desenvolvedor</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 13:51</span> >> Eu tenho uma crença, de que pra quem manja de testes unitários, escrever os testes vira "thinking fast", entra no piloto automático.. Para coisas pequenas acabam não impactando negativamente e traz beneficios (qualitativos e quantitativos). Agora, para alguns contextos pode ser visto como gold platting.. Se existe pressao por entrega mais que qualidade, gold platting é ruim.. Mas de novo.. Sao contextos e contextos..</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 13:52</span> >> Em resumo: não acho que um seja mais importante do que o outro, os dois sao importantes.. Em alguns contextos, um ou outro podem ser mais relevantes</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 14:36</span> >> o que é engenharia ágil de software? :thinking_face:</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 14:37</span> >> Ter um SM enquanto alguém coda</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 14:37</span> >> :parrot: </p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 14:47</span> >> o swebok de 2014 (quando agile já era mainstream) dedica ... 1 página às metodologias ágeis</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 14:52</span> >> respondendo ao <span class="cite">@dionatan</span>, não considero que haja engenharia ágil de software, dou mais valor ao modo de pensar</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 14:52</span> >> Respondendo sério, aplicar as técnicas de XP com, sei lá, as do Clean Code</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 14:52</span> >> Vamo polemizar <span class="cite">@victor</span> <span class="cite">@giggio</span> </p>
+<p class="messages"><span class="username">victor</span><span class="time"> 14:55</span> >> eu já entrei site com o <span class="cite">@felipero</span> sem TDD… e ficou no ar por 3 anos sem dar pau… #polemica</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 14:56</span> >> <span class="cite">@sergio.giraldo</span> engenharia ágil de software é o conjunto de práticas ligadas ao software diretamente. Por exemplo, integração contínua, TDD, automatização de testes, entrega contínua, revisão por pares, programação em pares.</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 14:56</span> >> <span class="cite">@victor</span> mas naquela época tu já sabia TDD?</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 14:57</span> >> Pra mim não existe “engenharia ágil de software”… tudo é engenharia de software…
+Alguns com novos desenhos, padrões, abordagem… mas é tudo engenharia de software</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 14:57</span> >> A prática estava incorporada no teu código de alguma forma?</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 14:58</span> >> em que difere da engenharia de software? é apenas o contexto, não?</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 14:58</span> >> Separar em engenharia ágil e “não ágil” seria a mesma coisa que falar que existe a antiga e nova constituição</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 14:58</span> >> sim… trabalho com tdd desde 2004 quando trabalha junto como <span class="cite">@ivan</span> em florianópolis</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 14:58</span> >> <span class="cite">@elias.nogueira</span> achei que o nome faria sentido. Não estoy definindo nada. Foi só pra seguir a conversa</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 14:58</span> >> constituição é constituição… engenharia de software é engenharia de software</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 14:59</span> >> Sim sim <span class="cite">@dionatan</span> é só pra levantar mais assuntos para o canal :wink:</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 14:59</span> >> <span class="cite">@victor</span> outros tempos aqueles. :slightly_smiling_face:</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 14:59</span> >> exato, criar polêmica</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 14:59</span> >> hoje o build nem passa na crafters se não estiver com 100%</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 14:59</span> >> tá na engine padrão de projetos</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 14:59</span> >> Opa Opa…. Build com 100% <span class="cite">@felipero</span> ?
+100% de que? :stuck_out_tongue:</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 15:00</span> >> cobertura?</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:00</span> >> 100% de cobertura</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:00</span> >> claro que dá pra burlar né</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:01</span> >> mas pelo menos o cara tem que escrever o teste lá... e aí, qual será a justificativa de não ter testes reais?</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 15:01</span> >> falando série, sem gozação… eu quero visitar vocês então. nunca vi uma cobertura de 100% realmente eficaz</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:01</span> >> e tbm não passa no code review</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:01</span> >> que agora o github não deixa nem mergear sem aprovação da branch por outro dev</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:01</span> >> <span class="cite">@elias.nogueira</span> A hora que vc quiser</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 15:01</span> >> \o/</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:01</span> >> podemos mostrar nosso processo todo</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:02</span> >> só que a visita vai ser virtual</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:02</span> >> pq somos remotos</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:02</span> >> ahuahauha</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:02</span> >> ou pode vir aqui em casa em SBO</p>
+<p class="messages"><span class="username">felipero</span><span class="time"> 15:02</span> >> tem sempre bom vinho na adega</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:13</span> >> <span class="cite">@elias.nogueira</span> valeu! Precisamos discutir mais sobre XP</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 15:14</span> >> precisamos mesmo :slightly_smiling_face:</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 15:15</span> >> Pra tu ter uma noção, hoje é o último dia do treinamento de CSD que estou ministrando… e em todas as sprints eu tenho metas técnicas com práticas de XP</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:15</span> >> <span class="cite">@motta</span> exatamente. Test First ou TDD ajudam bastante a desenvolver o código mais rápido sim na minha opinião. É uma ferramenta.</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 15:16</span> >> E no dia a dia todo mundo fala que sabe, que faz, mas no treinamento tu ve que o pessoal realmente não sabe fazer</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 15:16</span> >> Ou que alguém faz, ou fazem como TAD (Test After Development)</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:16</span> >> Kent Beck tem uma frase interessante.
+"Eu não sou um grande programador. Sou apenas um bom programador com grandes hábitos."</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 15:16</span> >> Nunca viram uma pipeline ou não sabem configurar… e por ai vai</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 15:19</span> >> e programação pareada? apreciam?</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:20</span> >> <a href="https://dionatanmoura.com/2016/01/15/tdd-is-a-practice-like-swimming/">https://dionatanmoura.com/2016/01/15/tdd-is-a-practice-like-swimming/</a></p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:21</span> >> E se tu não souber nadar, vai ter que caminhar dentro da água. O que pode até te dar uns caldos :p</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:21</span> >> TDD para mim é uma habilidade</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 15:22</span> >> Eu gosto de todo o tipo de pareamento não só em programação <span class="cite">@sergio.giraldo</span> 
+Mas não como prática constante</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:22</span> >> <span class="cite">@sergio.giraldo</span> certamente, mas dependendo do contexto do time e da tarefa. Não sou a favor de parear 100% do tempo</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:22</span> >> <span class="cite">@elias.nogueira</span> isso aí</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:23</span> >> Programação ou trabalho em pares ajuda muito no engajamento e colaboração do time, aprendizado e qualidade</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:23</span> >> Aumenta a energia e sinergia do time</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:24</span> >> Se é time, por que não trabalhar junto?</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:24</span> >> Não faz sentido ver um time trabalhando individualmente sempre</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:25</span> >> Não é um time exatamente</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:25</span> >> E faz pouco tempo que criaram o Mob Programming. Todo o time em hands-on pra uma tarefa apenas.</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 15:27</span> >> tem um colega meu usando mob, ele está gostando bastante</p>
+<p class="messages"><span class="username">sergio.giraldo</span><span class="time"> 15:27</span> >> principalmente para inception dos times</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:27</span> >> É bem interessante, mas mais específico ao meu ver</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:28</span> >> Numa palestra sobre TDD eu falei de uma metáfora. TDD é uma ferramenta igual a uma furadeira</p>
+<p class="messages"><span class="username">motta</span><span class="time"> 15:29</span> >> Eu discordo que faz pouco tempo que criaram mob programming :grimacing::grimacing::grimacing::grimacing:</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:29</span> >> Se tu nunca utilizou, pode estragar a parede, demorar muito mais tempo pra fazer um furo. Mas quando aprender, vai utilizar muito rápido e com qualidade</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:29</span> >> <span class="cite">@motta</span> quando que criaram?</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:29</span> >> Li ou ouvi falar que o nome vem de poucos anos</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:30</span> >> A utilização certamente é antiga, mas o termo?</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 15:34</span> >> Da pra falar que a Engenharia de Software pode ter um marco A.XP  e D.XP?</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 15:34</span> >> E um belo avanço com Clean Code?</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 15:35</span> >> Digo isso pq sobre a questão se há Eng. Ágil de Software ou não. Eu penso no advento XP</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 15:37</span> >> Falo isso pq eu faço um paralelo para Eng. de Requisitos. Uma sólida e boa base por Pressman, solidificada por UML e o RUP</p>
+<p class="messages"><span class="username">rafajagua</span><span class="time"> 15:38</span> >> E o advento do XP com a idéia de comunicação mais que documentação, trazendo o storytelling via User Story e afins</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:39</span> >> <span class="cite">@rafajagua</span> eu diria mais:
+A.K.B e D.K.B</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:40</span> >> Antes de Kent Beck e Depois de Kent Beck</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:41</span> >> Ele é o criador do XP. Sem ele, talvez não estaríamos nesse ponto de evolução em outras técnicas mais atuais</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:41</span> >> Tipo Einstein pra Física</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:42</span> >> Só que ele é similar ao Linus Towards. Não quer aparecer, ser famoso ou ficar milionário. Ele só é assim porque gosta. Tanto que até hoje é progeamador</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:42</span> >> *programador</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:43</span> >> E mais, Kent Beck é humilde. Enquanto muitos outros atacam XP ou TDD parecendo pra ganhar fama (estratégia de marketing)</p>
+<p class="messages"><span class="username">victor</span><span class="time"> 15:56</span> >> <span class="cite">@dionatan</span> o episódio do dhh falando mal de tdd fala muito sobre isso que vc disse... </p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 16:35</span> >> <span class="cite">@victor</span> e o Kent Beck ainda teve a paciência e humildade de fazer o debate</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 16:37</span> >> Aqui ele mistura um tom humilde que parece até irônico...
+<a href="https://m.facebook.com/notes/kent-beck/rip-tdd/750840194948847/">https://m.facebook.com/notes/kent-beck/rip-tdd/750840194948847/</a></p>
+<p class="messages"><span class="username">victor</span><span class="time"> 16:47</span> >> Foi bem tragicômico</p>
+<p class="messages"><span class="username">pimenta</span><span class="time"> 20:15</span> >> Fala, pessoal, qual a literatura indicada atualmente pra XP, além do eXtreme Programming? </p>
+    </body>
+    </html>
