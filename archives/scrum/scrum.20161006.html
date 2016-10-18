@@ -1,0 +1,145 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>scrum.20161006</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>scrum .:. 06/10/2016</h1>
+        <p class="messages"><span class="username">afucher</span><span class="time"> 17:40</span> >> Esse canal ta muito parado... vou mandar mais uma dúvida então :joy:</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 17:41</span> >> O time desenvolveu uma estória, ela foi testada e o P.O. deu aceite.. portanto foi dada como entregue na Sprint1</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 17:42</span> >> Porém no meio da Sprint2 foi visto que os testes não cobriam tudo e um bug foi encontrado na estória que tinha sido entregue</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 17:42</span> >> O que fazer neste caso? A estória volta? É criada uma nova estória? Ou é tratado com um bug (sei la)?</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 17:44</span> >> Pra mim oq faz mais sentido é criar um Bug, e colocar no product backlog com a prioridade que o PO decidir. Se for algo crítico pode entrar na Sprint corrente de não ferrar a Meta da Sprint</p>
+<p class="messages"><span class="username">vinicius.cosmi</span><span class="time"> 17:46</span> >> Acho que depende, na maioria vai ser tratada como bug mas, se o que faltou para realizar toda cobertura for algo grande ou como muita importância, é melhor ser criada uma nova estoria</p>
+<p class="messages"><span class="username">gamaitalo</span><span class="time"> 17:57</span> >> Concordo, no geral eu penso que deveria ser tratado como bug sim, mas como o <span class="cite">@vinicius.cosmi</span> disse, se esse bug for algo muito significativo pode ser válido criar uma estoria</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 17:58</span> >> Mas meu receio é que ninguém veja isso como um "retrabalho", pq teoricamente é</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 17:58</span> >> Se for como uma estória nova, não vai parecer isso...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:04</span> >> <span class="cite">@afucher</span> depende do tipo de bug !</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 18:05</span> >> diga me mais <span class="cite">@andersonhummel</span></p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:06</span> >> Se for um comportamento novo no software, que não era esperado inicialmente, faz todo o sentido entrar como User Story.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:07</span> >> No waterfall é mais facil explicar...  Esse bug é como se fosse uma comida de bola do analista que o cliente percebe depois saca?</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 18:07</span> >> Ahh agora entendi! Porém, neste caso foi um bug realmente que colocaram no sistema hahaha</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:08</span> >> Tipo o calculo ta saindo errado, é isso?</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:08</span> >> Era pra somar 5 e no fim esqueceram...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:08</span> >> é isso?</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 18:08</span> >> Seria um colateral.. mexeu numa coisa, e zuou outra</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 18:08</span> >> mas o teste não estava cobrindo a outra coisa, portanto ninguém viu</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 18:09</span> >> Levando em conta que o sistema é legado, e tem pouco cobertura de teste.. o que faz com que isso tenda a acontecer com frequencia agora no começo (eu acho)</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:09</span> >> Agora sim :slightly_smiling_face:</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:10</span> >> Vc está com teste automatizado ai? ou pelo meno começando?</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 18:11</span> >> Tentando começar :wink:</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:12</span> >> Lê o agile Samurai parte 5 :slightly_smiling_face:</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:12</span> >> Lá ele dá uma sugestão um pouco diferente do que vou falar agora... blz!</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:13</span> >> Faz assim adiciona o item como um Bug no Product Backlog e pede pro PO priorizar.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:13</span> >> Se o PO achar urgente urgentissimo valida com o time se não ferra a meta. Se não coloca na Sprint corrente.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:14</span> >> Vc ta medindo a velocidade do time como?</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 18:16</span> >> Como assim, como estou medindo?</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 18:16</span> >> Estamos iniciando a 3ª Sprint agora.. então acho que ainda nem tenho muito como saber a velocidade real do time</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:17</span> >> ||Mas meu receio é que ninguém veja isso como um "retrabalho", pq teoricamente é
+Se for como uma estória nova, não vai parecer isso...||</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:18</span> >> Fiz essa pergunta, pq estou tentando entender como dar a visibilidade da dor do retrabalho q vc falor...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:19</span> >> Se vc  tiver medindo por numero de User Story entregues vc pode simplesmente mostrar q vc entregou na 
+sprint 3: 4 User Storys e 1 Bug
+sprint 4: 2 User Storys e 2 Bugs</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:20</span> >> e assim dar a noção que corrigir bug doi no time...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:20</span> >> sacou?</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:21</span> >> faz sentido?</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 18:21</span> >> Sim, entendi.. e faz sentido</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:41</span> >> a conversa continuou no privado :
+afucher [6:33]   débito técnico, devo tratar igual ao bug? tipo, criar uma task de débito técnico?
+
+andersonhummel [6:34 PM]  exemplifica o debito tecnico... (edited)
+andersonhummel [6:34]  kkkk
+
+afucher [6:34 PM]  não tenho exemplo ahhahahah mas é algo que eu estava pensando em como colocar no JIRA ahhahah
+afucher [6:35]  mas sei la, o time sabe que tem algo que pode ser refatorado para ficar melhor .. talvez isso seja um exemplo
+afucher [6:35]  para mim é um débito técnico isso
+
+andersonhummel [6:35 PM]  sim, coloca DEBITOTECNICO- e pede pro PO priorizar
+andersonhummel [6:35]  uahhuahua
+
+afucher [6:35 PM]  hauhauhua mas a questão era, se eu conseguir pedir para criarem.. o ideal seria criar uma task/issue do tipo Débito Técnico, certo?
+afucher [6:35]  para melhorar controle e tals
+
+andersonhummel [6:36 PM]  Eu penso nas seguintes divisões, não que eu use todas no msm projeto :
+andersonhummel [6:36]  Requisito não funcional (Futuro pra não dar merda) 
+andersonhummel [6:36]  Spike (Futuro de pesquisa)
+andersonhummel [6:36]  Debito Técnico  ( Passado cagado) 
+andersonhummel [6:36]  Bug ( Passado cagado) 
+andersonhummel [6:36]  User Story (presente que gera valor)</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:44</span> >> <span class="cite">@afucher</span>: Como exemplo de requisito não funcional pensa em uma aplicação que no inicio vc pensou q ela era parruda.</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:44</span> >> ai chegou um belo dia, tipo black fridays, e o server morre :disappointed:</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:44</span> >> vc começa a fazer teste de carga e percebe q sua aplicação morre com 100 usuarios pendurados ao mesmo tempo</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:45</span> >> vc tem um requisito não funcional que precisa ser atendido para sua area de negocio ficar feliz que é o numero de usuarios simultaneos</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:45</span> >> isso entra como um requisito não funcional :slightly_smiling_face:</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:45</span> >> consegui explicar?</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 18:45</span> >> yeap!</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 18:46</span> >> Não tinha entendido o (Futuro para não dar merda), mas agora ficou claro</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:47</span> >> geralmente RNF é mais relacionado ao futuro da aplicação, todavia vc pode encarar como algo do passado</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:47</span> >> a algum tempo tenho preferido pensar no product backlog como um reflexo temporal das necessidades do produto</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 18:47</span> >> por isso a divisão em Passado, Presente e Futuro...</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 18:53</span> >> interessante!</p>
+<p class="messages"><span class="username">ceci</span><span class="time"> 18:55</span> >> Eu acho que tem uma importante ressalva nesse lance de ser futuro, pros não-funcionais</p>
+<p class="messages"><span class="username">ceci</span><span class="time"> 18:59</span> >> Pra não cair em BDuF, é importante ter uma razão pra chutar que o RNF é necessário</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 19:04</span> >> Toda vez que entra no futuro, vale a reflexão;)</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 19:25</span> >> <span class="cite">@ceci</span> não entendi .. poderia explicar melhor?</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 19:26</span> >> Esquece, refleti um pouco melhor e entendi hahhahah</p>
+<p class="messages"><span class="username">ceci</span><span class="time"> 19:26</span> >> <span class="cite">@afucher</span>: era um problema maior no passado, mas a gente ainda vê acontecer de time setarem expectativas mega altas de necessidade de escalabilidade ou disponibilidade de uma app, que não necessariamente são verdades.</p>
+<p class="messages"><span class="username">ceci</span><span class="time"> 19:26</span> >> Ah, agora eu já tô escrevendo... haha</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 19:27</span> >> uhuahauh suave, se alguém não entender já tá ai! informação sempre é bom</p>
+<p class="messages"><span class="username">ceci</span><span class="time"> 19:28</span> >> Tipo.. eu tô criando um produto novo que só vou abrir, no momento, pra beta users. Aí eu coloco que a app tem que estar no ar 99.9%+ do tempo.
+
+O custo pra fazer isso pode ser simplesmente impeditivo para esse momento da app ou, no mínimo, consumir um tanto de trabalho que poderia muito bem ir pra outra feature que melhoraria o produto.</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 19:38</span> >> Mas aí me surge uma dúvida <span class="cite">@ceci</span>, eu coloco isso como um RNF mas deixo a prioridade dele baixa, ou nem coloco? Pois, eu ainda nem sei se preciso realmente dele?</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 19:41</span> >> quando digo precisar realmente, quero dizer que ainda não sei se meu app não aguenta já 99.9%+ do tempo</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 19:51</span> >> <span class="cite">@afucher</span> disponibilidade de 99,9% é igual a downtime em uma semana de 10 minutos...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 19:52</span> >> Atingir essa disponibilidade tem um custo...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 19:53</span> >> E tem como fazer estimativas da sua disponibilidade...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 19:53</span> >> Ou vc mensura e conforme for sendo necessário vc vai adequando o requisito não funcional...</p>
+<p class="messages"><span class="username">andersonhummel</span><span class="time"> 19:59</span> >> <span class="cite">@ceci</span> como vc faria ?</p>
+    </body>
+    </html>

@@ -1,0 +1,76 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>testes.20161014</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>testes .:. 14/10/2016</h1>
+        <p class="messages"><span class="username">afucher</span><span class="time"> 11:32</span> >> alguém já usou o selenium? Opiniões?</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 11:41</span> >> Opiniões sobre…? se é bom? ruim? recomendação?</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 11:57</span> >> sim, se ja usaram? recomendação...</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 11:58</span> >> quais as opiniões/impressões sobre ele</p>
+<p class="messages"><span class="username">rodrigo.freitas</span><span class="time"> 12:27</span> >> é bom sim. mas dá uma olhada no casperJS</p>
+<p class="messages"><span class="username">rodrigo.freitas</span><span class="time"> 12:27</span> >> :smile:</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 13:01</span> >> É bom, bem consolidado no mercado, mas existem outra opções (não digo melhores, mas interessantes). Dependendo do quer, talvez precise pensar em outros frames. Mas para um equipe sem muita experiencia, ou recem começando a querer automatizar algo (ou somente o cabloco heheh), selenium é um bom começo..</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 13:37</span> >> hahahahhah bem por aí <span class="cite">@rsaccoll</span></p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 13:38</span> >> <span class="cite">@rodrigo.freitas</span> eu tava vendo o casperJS, mas achei meio confuso :S</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 13:38</span> >> Qualquer treta, sai a versão 3.0..
+<a href="https://seleniumhq.wordpress.com/2016/10/13/selenium-3-0-out-now/">https://seleniumhq.wordpress.com/2016/10/13/selenium-3-0-out-now/</a></p>
+<p class="messages"><span class="username">rodrigo.freitas</span><span class="time"> 13:39</span> >> :slightly_smiling_face:</p>
+<p class="messages"><span class="username">rodrigo.freitas</span><span class="time"> 13:41</span> >> <span class="cite">@rsaccoll</span> é perito nisso :smile:</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 13:42</span> >> em que? treta? auheauehuaeu…Shiii espalha não..nem todo mundo me conhece (ainda bem) hehehe</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 13:51</span> >> vou dar uma olhada então nessa versão nova do selenium! assim se começar, já começo com a última xD</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 13:52</span> >> Só lembra que “bugs” podem ocorrer…Faz parte..:parrot:</p>
+<p class="messages"><span class="username">afucher</span><span class="time"> 13:52</span> >> justo! :slightly_smiling_face:</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 16:09</span> >> <span class="cite">@afucher</span> todos os frameworks de automação mais padronizados de marcado (open source ou não) estão usando Selenium direta ou indiretamente</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 16:10</span> >> O que vai depender é um pouco a linguagem que tu vai utilizar e a DSL (os comandos, a grosso modo) que tu vai querer usar</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 16:11</span> >> Eu prefiro usar o Selenium puro (api pura que na página é chamada de binding) mas tu podes usar qualquer outro framework que facilite a DSL pra ti, como o Capybara (<a href="https://github.com/jnicklas/capybara">https://github.com/jnicklas/capybara</a>) e similares</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 16:12</span> >> A questão do CasperJs ou qualquer outro browser headless é mais em velocidade do que tu usar 100% para teus testes funcionais/aceitação porque, em algum momento (digo isso por experiência) tu vai precisar do browser em si e não a simulação da engine para executar um teste</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 16:12</span> >> eu geralmente crio os scripts de smoke com casperjs por conta da velocidade de execução, e o restante com Selenium “puro"</p>
+<p class="messages"><span class="username">elias.nogueira</span><span class="time"> 16:14</span> >> E a versão 3.0 está bem redonda… estou utilizando deste o primeiro beta</p>
+    </body>
+    </html>

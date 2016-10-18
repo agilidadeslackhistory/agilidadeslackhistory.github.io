@@ -1,0 +1,78 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>xp.20161017</title>
+        <style>
+            * {
+				font-family:courier;
+			}
+			body {
+                text-align:center;
+				padding:1em;
+			}
+			.messages {
+				width:100%;
+				text-align:left;
+			}
+			.messages img {
+				background-color:rgb(248,244,240);
+				width:36px;
+				height:36px;
+				border-radius:0.2em;
+				vertical-align:top;
+				margin-right:0.65em;
+			}
+			.messages .time {
+				display:inline-block;
+				color:rgb(200,200,200);
+				margin-left:0.5em;
+			}
+			.messages .username {
+				font-weight:600;
+				line-height:1;
+			}
+			.messages .message {
+				vertical-align:top;
+				line-height:1;
+				width:calc(100% - 3em);
+			}
+			.messages .message .msg {
+				line-height:1.5;
+			}
+            .cite {
+				color:blue;
+                font-weight:bold;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>xp .:. 17/10/2016</h1>
+        <p class="messages"><span class="username">danjesus</span><span class="time"> 22:23</span> >> <span class="cite">@dionatan</span> sempre  uso mock nos meus testes, isso possibilita que os testes sejam unitários. Não vejo como isso poderia quebrar os principios de solid, uma vez que o código de teste visa simular o uso do código que se está escrevendo no mundo real.
+
+Além disso se estamos desenvolvendo seguindo os principios de SOLID isso vai ajudar muito na testabilidade do código.</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 10:23</span> >> Não mais do que 30% em sprints iniciais..Depois é visto com o time se deve manter ou usar dados reais.. :+1:</p>
+<p class="messages"><span class="username">danjesus</span><span class="time"> 12:10</span> >> Não entendi <span class="cite">@rsaccoll</span>, vocês usam dados reais, mas ai seriam testes de integração, em testes de integração normalmente crio um ambiente com dados que estão em produção também.</p>
+<p class="messages"><span class="username">danjesus</span><span class="time"> 12:10</span> >> Mas tudo dependendo do objetivo do teste</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 12:25</span> >> <span class="cite">@rsaccoll</span>: acho que mesma dúvida do <span class="cite">@danjesus</span> , partem para os testes de integração? Pq se só mudar os dados, simulando a integração, ainda sim seriam mocks, certo?</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 12:26</span> >> E os 30%, como mede isso?</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 12:27</span> >> Ué, ele não perguntou sobre a escrita de teste..Isso não engloba tudo? Ou entendi errado?</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 12:28</span> >> A parte de 30% é para não ficar com um “set” viciado. Muitos dos projetos que trabalho a parte de backend muda e muda a regra de uma maneira grotesca. E isso não é controle da nossa parte. Então se precisa mockar algo, a gente usa essa margem para não ficar “viciado” com o a suite inteira..</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 12:29</span> >> Não podemos nos dar o luxo de achar que a estrutura a qual estamos usando sempre vai ser única e imutável. Por isso preciso chegar em uma % e usar ela até o avanço do projeto. Por isso falei que 30% em sprints iniciais. Conforme vai rolando a gente vai vendo o problema e achando uma solução..</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 12:41</span> >> Banaca... mas como mede os 30%?</p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 12:46</span> >> Por chute..:trollface: . Na verdade é um pouco por instinto. A gente sempre tem a possibilidade de analisar os serviços e a gente sabe, daí por experiencia mesmo, o que não vai mudar em 2 sprints digamos…Nos temos o que é prometido entregar em uma sprint, e sabemos a capacidade de cada item. E a gente trabalha com isso.</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 13:32</span> >> Leiam esse artigo sobre criar testes classical ou mockist. É sobre design dos testes em utilizar mock ou não.
+<a href="http://martinfowler.com/articles/mocksArentStubs.html#ClassicalAndMockistTesting">http://martinfowler.com/articles/mocksArentStubs.html#ClassicalAndMockistTesting</a></p>
+<p class="messages"><span class="username">rsaccoll</span><span class="time"> 13:33</span> >> ..ou não leiam… A escolha é de vcs..:trollface:</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 13:36</span> >> Especialmente a parte "Choosing Between the Differences"</p>
+<p class="messages"><span class="username">ceci</span><span class="time"> 14:48</span> >> Na Agile Brazil 2013, o <span class="cite">@hugo.corbucci</span> e o <span class="cite">@mauricioaniche</span> duelaram sobre esse assunto. O vídeo tá aqui: <a href="https://vimeo.com/84180743">https://vimeo.com/84180743</a></p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 14:50</span> >> <span class="cite">@ceci</span> isso! Eu estava nesse duelo! Tentei reassistir nesse findi (e ano passado) mas a qualidade do vídeo não está muito boa, e o câmera não se ligou em filmar a tela também em boa parte do vídeo</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 14:54</span> >> Antes desse duelo, não imaginava como seria não mockar. A partir desse dia escrevi zero mocks. (Outrod dublês sim)</p>
+<p class="messages"><span class="username">dionatan</span><span class="time"> 15:14</span> >> <span class="cite">@hugo.corbucci</span> <span class="cite">@mauricioaniche</span> </p>
+<p class="messages"><span class="username">hugo.corbucci</span><span class="time"> 15:16</span> >> hehe foi divertido... 1o duelo da AB...</p>
+<p class="messages"><span class="username">hugo.corbucci</span><span class="time"> 15:16</span> >> Eu achando que estava ganhando vários argumentos e o <span class="cite">@mauricioaniche</span>  acabou comigo na votação final do público! hehe</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 19:17</span> >> 'Mockar' ou não mockar, testar estado e/ou testar comportamento, eternas discussões hehe, e como quase tudo, vai de bom senso... não tem certo ou errado neh...</p>
+<p class="messages"><span class="username">victor.franzonatto</span><span class="time"> 19:22</span> >> Uma vez um cliente me falou: - 'Victor, como você me faz uma entrega baseada em mocks', e eu: 'Ué, mas já estamos na homologação e você não terminou as integrações, como eu testo integrado?'.... silêncio... kkkkk</p>
+    </body>
+    </html>
